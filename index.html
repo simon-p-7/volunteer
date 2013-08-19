@@ -1,10 +1,19 @@
 <!doctype html>
-<html>
+<html lang="zh">
 <head>
 <meta charset="utf-8">
 <title>test</title>
+<script src="common/js/cordova.js"></script>
+<script>
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() { }
+
+function showAlert() {
+	navigator.notification.alert('You are the winner!', null, 'Game Over', 'Done');
+}
+</script>
 </head>
 <body>
-<h1>test</h1>
+	<button type="button" onClick="showAlert()">Show Alert</button>
 </body>
 </html>
