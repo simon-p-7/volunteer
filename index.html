@@ -14,7 +14,11 @@ function showAlert() {
 }
 
 function getBaidu() {
-	$("body").append("<div>abc</div>");
+	var b = $("body");
+	b.append("<div>abc</div>");
+	$.post("http://www.baidu.com", null, function(data, status) {
+		b.append(data);
+	});
 }
 </script>
 </head>
