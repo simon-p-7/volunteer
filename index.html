@@ -2,23 +2,17 @@
 <html lang="zh">
 <head>
 <meta charset="utf-8">
-<title>test</title>
+<title>home</title>
 <script src="common/js/cordova.js"></script>
 <script src="common/js/zepto.min.js"></script>
+<script src="common/js/base.js"></script>
 <script>
-document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() { }
-
 function showAlert() {
-	navigator.notification.alert('You are the winner!', getBaidu, 'Game Over', 'Done');
+	alert('You are the winner!', goto, 'Game Over', 'Done');
 }
 
-function getBaidu() {
-	var b = $("body");
-	b.append("<div>abc</div>");
-	$.post("http://www.baidu.com", null, function(data, status) {
-		b.append(data);
-	});
+function goto() {
+	win.location.href = "sub.html";
 }
 </script>
 </head>
