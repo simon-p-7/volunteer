@@ -4,12 +4,17 @@
 <meta charset="utf-8">
 <title>test</title>
 <script src="common/js/cordova.js"></script>
+<script src="common/js/zepto.min.js"></script>
 <script>
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() { }
 
 function showAlert() {
-	navigator.notification.alert('You are the winner!', null, 'Game Over', 'Done');
+	navigator.notification.alert('You are the winner!', getBaidu, 'Game Over', 'Done');
+}
+
+function getBaidu() {
+	$("body").append("<div>abc</div>");
 }
 </script>
 </head>
