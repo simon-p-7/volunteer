@@ -9,6 +9,6 @@ $(function() {
 	
 	function login(e) {
 		sess.setItem("user_id", "2");
-		redirect("sub.html");
+		redirect("info.html");
 	}
 })
