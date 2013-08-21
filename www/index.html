@@ -4,21 +4,15 @@
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
-<title>home</title>
+<title>登录 | 绍兴志愿者</title>
 <script src="common/js/cordova.js"></script>
 <script src="common/js/zepto.min.js"></script>
 <script src="common/js/base.js"></script>
-<script>
-function showAlert() {
-	alert('You are the winner!', goto, 'Game Over', 'Done');
-}
-
-function goto() {
-	win.location.href = "sub.html";
-}
-</script>
+<script src="js/index.js"></script>
 </head>
 <body>
-	<button type="button" onClick="showAlert()">Show Alert</button>
+	帐 号：<input id="txt_un" type="text"><br>
+    密 码：<input id="txt_pw" type="password"><br>
+	<button id="btn_li" type="button">登 录</button>
 </body>
 </html>

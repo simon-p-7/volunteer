@@ -13,6 +13,7 @@
 <script>
 	$.post("http://www.baidu.com", null, function(data, status) {
 		$("body").append(data);
+		alert(sess.getItem("user_id"), "user", null, "OK");
 	});
 </script>
 </body>
