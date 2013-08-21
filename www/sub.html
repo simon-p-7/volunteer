@@ -13,7 +13,7 @@
 </body>
 <script>
 	$.post(volHost + "Get", null, function(data) {
-		$("body").html(data);
-	}, "json");
+		alert(XML2JSON(data).length);
+	}, "xml");
 </script>
 </html>
