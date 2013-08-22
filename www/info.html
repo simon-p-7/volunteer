@@ -10,13 +10,21 @@
 <script src="js/info.js"></script>
 </head>
 <body>
-	<div>志愿者信息</div>
-	<button id="btn_launch" type="button">开展的项目</button>
-    <button id="btn_apply" type="button">已报名项目</button>
-    <button id="btn_participate" type="button">已参与项目</button>
-    <button id="btn_training" type="button">参与培训</button>
-    <br>
-    头像：<br>
-    姓名：<br>
+	<header>
+    	<button onClick="goBack()">&lt;</button>
+        志愿者信息
+    </header>
+    <nav>
+    	<ul>
+        	<li id="li_launch">开展的项目</li>
+            <li id="li_apply">已报名项目</li>
+            <li id="li_participate">已参与项目</li>
+            <li id="li_training">参与培训</li>
+        </ul>
+    </nav>
+    <article>
+        头像：<output id="aaa"></output><br>
+        姓名：<output id="bbb"></output><br>
+    </article>
 </body>
 </html>

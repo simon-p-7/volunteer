@@ -12,3 +12,7 @@ win.redirect = function(h) {
 win.XML2JSON = function(data) {
 	return JSON.parse($(data).find("string").text());
 }
+
+win.goBack = function() {
+	win.history.back();	
+}

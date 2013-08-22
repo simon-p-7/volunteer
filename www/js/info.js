@@ -1,9 +1,9 @@
 $(function() {
 	$.post(volHost + "UserInfo", null, function(data) {
-		alert(XML2JSON(data).length);
+		alert(XML2JSON(data));
 	}, "xml");
 	
-	$("button").click(function(e) {
+	$("nav ul li").click(function(e) {
         alert(e.target.id);
     });
 })
