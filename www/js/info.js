@@ -1,5 +1,7 @@
 $(function() {
-	$.post(volHost + "UserInfo", null, function(data) {
+	$.post(volService + "UserInfo", {
+		id: sess.getItem("user_id")
+	}, function(data) {
 		alert(XML2JSON(data));
 	}, "xml");
 	
