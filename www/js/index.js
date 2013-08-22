@@ -8,7 +8,7 @@ $(function() {
 	$("#btn_li").click(login);
 	
 	function login(e) {
-		sess.setItem("user_id", "7");
+		setItem("user_id", "7");
 		redirect("info.html");
 	}
 })

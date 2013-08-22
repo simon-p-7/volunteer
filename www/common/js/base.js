@@ -21,3 +21,11 @@ win.goBack = function() {
 win.getUser = function() {
 	return sess.getItem("user_id");
 }
+
+win.setItem = function(k, v) {
+	sess.setItem(k, v);
+}
+
+win.getItem = function(k) {
+	sess.getItem(k);
+}
