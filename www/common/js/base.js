@@ -17,3 +17,7 @@ win.XML2JSON = function(data) {
 win.goBack = function() {
 	win.history.back();	
 }
+
+win.getUser = function() {
+	return sess.getItem("user_id");
+}
