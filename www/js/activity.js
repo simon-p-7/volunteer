@@ -1,9 +1,8 @@
 $(function() {
-	var pid = getItem("activity_id").substring(2, pid.length);
-	alert(pid)
-	$.post(volService + "Activity", { pid: 2 }, function(data) {
+	var pid = getItem("activity_id");
+	pid = pid.substring(2, pid.length);
+	$.post(volService + "Activity", { pid: pid }, function(data) {
 		var d = XML2JSON(data);
-		alert(d);
 		$("#team").val(d[0]);
 		$("#squad").val(d[1]);
 		$("#type").val(d[2]);
