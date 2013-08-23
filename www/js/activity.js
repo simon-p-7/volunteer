@@ -1,6 +1,7 @@
 $(function() {
 	var aid = getItem("activity_id");
 	aid = aid.substring(2, aid.length);
+	alert("" + getUser() + aid + getItem("activity_had"));
 	$.post(volService + "Activity", { id: getUser(), pid: aid, had: getItem("activity_had") }, function(data) {
 		var d = XML2JSON(data);
 		d[22] === "0" && $("article").remove("#join");
