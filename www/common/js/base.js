@@ -28,5 +28,5 @@ win.setItem = function(k, v) {
 }
 
 win.getItem = function(k) {
-	sess.getItem(k);
+	return sess.getItem(k);
 }
