@@ -1,11 +1,9 @@
 $(function() {
 	var id = getItem("activity_id");
 	id = id.substring(2, id.length);
-	alert(id)
 	$.post(volService + "Activity", { pid: id }, function(data) {
 		var d = XML2JSON(data);
-		alert(d);
-		/*$("#team").val(d[0]);
+		$("#team").val(d[0]);
 		$("#squad").val(d[1]);
 		$("#type").val(d[2]);
 		$("#title").html(d[3]);
@@ -15,7 +13,7 @@ $(function() {
 		$("#phone").val(d[7]);
 		$("#number").val(d[8]);
 		$("#long").val(d[9]);
-		$("#content").val(d[10]);
+		/*$("#content").val(d[10]);
 		$("#target").val(d[11]);
 		$("#claim").val(d[12]);
 		$("#recruit").val(d[13]);
