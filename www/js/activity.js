@@ -1,10 +1,11 @@
 $(function() {
 	var id = getItem("activity_id");
 	id = id.substring(2, id.length);
-	$.post(volService + "Activity", { pid: 2 }, function(data) {
+	alert(id)
+	$.post(volService + "Activity", { pid: id }, function(data) {
 		var d = XML2JSON(data);
 		alert(d);
-		$("#team").val(d[0]);
+		/*$("#team").val(d[0]);
 		$("#squad").val(d[1]);
 		$("#type").val(d[2]);
 		$("#title").html(d[3]);
@@ -24,6 +25,6 @@ $(function() {
 		$("#time").val(d[17] + " - " + d[18]);
 		$("#participate").val(d[19]);
 		$("#detail").val(d[20]);
-		d[21] && $("#attachment").attr("href", filePath + d[21]).html(d[21]);
+		d[21] && $("#attachment").attr("href", filePath + d[21]).html(d[21]);*/
 	}, "xml");
 })
