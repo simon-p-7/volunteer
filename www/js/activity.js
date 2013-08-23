@@ -13,7 +13,7 @@ $(function() {
 		$("#phone").val(d[7]);
 		$("#number").val(d[8]);
 		$("#long").val(d[9]);
-		/*$("#content").val(d[10]);
+		$("#content").val(d[10]);
 		$("#target").val(d[11]);
 		$("#claim").val(d[12]);
 		$("#recruit").val(d[13]);
@@ -23,6 +23,6 @@ $(function() {
 		$("#time").val(d[17] + " - " + d[18]);
 		$("#participate").val(d[19]);
 		$("#detail").val(d[20]);
-		d[21] && $("#attachment").attr("href", filePath + d[21]).html(d[21]);*/
+		/*d[21] && $("#attachment").attr("href", filePath + d[21]).html(d[21]);*/
 	}, "xml");
 })
