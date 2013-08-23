@@ -1,7 +1,9 @@
 $(function() {
 	var pid = getItem("activity_id").substring(2, pid.length);
-	$.post(volService + "Activity", { pid: pid }, function(data) {
+	alert(pid)
+	$.post(volService + "Activity", { pid: 2 }, function(data) {
 		var d = XML2JSON(data);
+		alert(d);
 		$("#team").val(d[0]);
 		$("#squad").val(d[1]);
 		$("#type").val(d[2]);
@@ -22,6 +24,6 @@ $(function() {
 		$("#time").val(d[17] + " - " + d[18]);
 		$("#participate").val(d[19]);
 		$("#detail").val(d[20]);
-		d[21] && $("#attachment").attr("href", filePath + d[21]);
+		d[21] && $("#attachment").attr("href", filePath + d[21]).html(d[21]);
 	}, "xml");
 })
