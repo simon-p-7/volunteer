@@ -1,8 +1,9 @@
 $(function() {
 	var id = getItem("activity_id");
 	id = id.substring(2, id.length);
-	$.post(volService + "Activity", { pid: id }, function(data) {
+	$.post(volService + "Activity", { pid: id, had: getItem("activity_had") }, function(data) {
 		var d = XML2JSON(data);
+		d[22] === "0" && $("join").remove();
 		$("#team").val(d[0]);
 		$("#squad").val(d[1]);
 		$("#type").val(d[2]);
@@ -23,6 +24,6 @@ $(function() {
 		$("#time").val(d[17] + " - " + d[18]);
 		$("#participate").val(d[19]);
 		$("#detail").val(d[20]);
-		d[21] && $("#attachment").attr("href", filePath + d[21]).html(d[21]);
+		d[21] && $("#attachment").attr("href", filePath + d[21]).html("点击下载");
 	}, "xml");
 })

@@ -8,6 +8,7 @@ $(function() {
 	
 	ul.click(function(e) {
         setItem("activity_id", e.target.id);
+		setItem("activity_had", false);
 		redirect("activity.html");
     });
 })
