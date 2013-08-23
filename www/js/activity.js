@@ -23,6 +23,6 @@ $(function() {
 		$("#time").val(d[17] + " - " + d[18]);
 		$("#participate").val(d[19]);
 		$("#detail").val(d[20]);
-		/*d[21] && $("#attachment").attr("href", filePath + d[21]).html(d[21]);*/
+		d[21] && $("#attachment").attr("href", filePath + d[21]).html(d[21]);
 	}, "xml");
 })
