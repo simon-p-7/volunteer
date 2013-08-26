@@ -4,7 +4,7 @@ win.fileHost = "http://10.0.2.2:15041/", win.skinPath = fileHost + "Skin/Images/
 
 doc.addEventListener("deviceready", function(e) {
 	navigator.notification && (win.nav = navigator, win.alert = nav.notification.alert, win.confirm = nav.notification.confirm);
-	nav.connection.type == Connection.NONE && alert("网络连接不可用", nav.app.exitApp, "提 示", "退 出");
+	nav.connection.type == Connection.NONE && alert("网络连接不可用，请检查！", nav.app.exitApp, "对不起", "退 出");
 }, false);
 
 win.redirect = function(h) {
