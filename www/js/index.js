@@ -15,13 +15,14 @@ $(function() {
 	$("#scan").click(function(e) {
         try {
             var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+			alert(scanner);
             scanner.scan(function(res) {
 				res.cancelled || alert(res.format + ": " + res.text);
-            }, function(error) { 
-                alert(error); 
+            }, function(err) {
+                alert("err: " + err);
             });
         } catch (ex) {
-            alert(ex.message);
+            alert("ex: " + ex.message);
         }
     });
 })
