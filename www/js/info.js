@@ -3,11 +3,11 @@ $(function() {
 		type: "POST",
 		url: volService + "UserInfo",
 		data: { id: getUser() },
-		dataType: "jsonp",
+		dataType: "xml",
 		global: false,
 		success: function(data, status, xhr) {
-			alert(data);
 			var d = XML2JSON(data);
+			alert(d);
 		},
 		error: function(xhr, errorType, error) {
 			alert(errorType + ": " + error);
