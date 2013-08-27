@@ -14,7 +14,7 @@ $(function() {
 	
 	$("#scan").click(function(e) {
         try {
-            var scanner = cordova.require("../cordova/plugin/BarcodeScanner");
+            var scanner = cordova.require("cordova/plugin/BarcodeScanner");
             scanner.scan(function(res) {
 				res.cancelled || alert(res.format + ": " + res.text);
             }, function(err) {
