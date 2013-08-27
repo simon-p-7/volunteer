@@ -1,4 +1,5 @@
 $(function() {
+	alert(jQuery.support.cors);
 	$.support.cors = true;
 	$.post(volService + "UserInfo", { id: getUser() }, function(data) {
 		var d = XML2JSON(data);
@@ -25,4 +26,4 @@ $(function() {
 	$("nav ul li").click(function(e) {
         redirect(e.target.id + "-activity.html");
     });
-})
+});
