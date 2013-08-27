@@ -5,7 +5,6 @@
     <author email="simon.p.7@hotmail.com" href="http://simon7world.wordpress.com/">Simon P. Chang</author>
 	<!-- plugin -->
 	<gap:plugin name="com.phonegap.plugins.barcodescanner" />
-	<gap:plugin name="com.phonegap.plugins.childbrowser" />
     <!-- permission -->
 	<feature name="http://api.phonegap.com/1.0/battery" />
 	<feature name="http://api.phonegap.com/1.0/camera" />
