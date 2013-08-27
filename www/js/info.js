@@ -1,19 +1,16 @@
 $(function() {
-	console.log(volService + "UserInfo");
 	$.ajax({
 		type: "POST",
 		url: volService + "UserInfo",
 		data: { id: getUser() },
-		dataType: "xml",
+		dataType: "jsonp",
 		global: false,
 		success: function(data, status, xhr) {
-			console.log("data: ");
-			console.log(data);
+			alert(data);
 			var d = XML2JSON(data);
-			console.log(d);
 		},
 		error: function(xhr, errorType, error) {
-			console.log(errorType + ": " + error);
+			alert(errorType + ": " + error);
 		}
 	});
 	/*$.post(volService + "UserInfo", { id: getUser() }, function(data) {
