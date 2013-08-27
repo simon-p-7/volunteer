@@ -1,5 +1,6 @@
 $(function() {
-	$.post(volService + "UserInfo", { id: getUser() }, function(data) {
+	alert(volService);
+	$.get(volService + "UserInfo", { id: getUser() }, function(data) {
 		alert(data);
 		var d = XML2JSON(data);
 		$("#uname").val(d[0]);
@@ -20,7 +21,7 @@ $(function() {
 		$("#head").attr("src", skinPath + d[15]);
 		$("#hour").val(d[16]);
 		var lel = d[17];
-	}, "json");
+	}, "xml");
 	
 	$("nav ul li").click(function(e) {
         redirect(e.target.id + "-activity.html");
