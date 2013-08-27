@@ -1,6 +1,19 @@
 $(function() {
-	alert(volService);
-	$.get(volService + "UserInfo", { id: getUser() }, function(data) {
+	$.ajax({
+		type: "POST",
+		url: volService + "UserInfo",
+		data: { id: getUser() },
+		dataType: "xml",
+		global: false,
+		success: function(data, status, xhr) {
+			var d = XML2JSON(data);
+			alert(d);
+		},
+		error: function(xhr, errorType, error) {
+			alert(errorType + ": " + error);
+		}
+	});
+	/*$.post(volService + "UserInfo", { id: getUser() }, function(data) {
 		alert(data);
 		var d = XML2JSON(data);
 		$("#uname").val(d[0]);
@@ -21,7 +34,7 @@ $(function() {
 		$("#head").attr("src", skinPath + d[15]);
 		$("#hour").val(d[16]);
 		var lel = d[17];
-	}, "xml");
+	}, "xml");*/
 	
 	$("nav ul li").click(function(e) {
         redirect(e.target.id + "-activity.html");
