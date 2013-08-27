@@ -1,5 +1,5 @@
 $(function() {
-	alert(jQuery.support.cors);
+	alert(jQuery.support);
 	$.support.cors = true;
 	$.post(volService + "UserInfo", { id: getUser() }, function(data) {
 		var d = XML2JSON(data);
