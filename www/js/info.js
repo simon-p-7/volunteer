@@ -1,6 +1,6 @@
 $(function() {
-	alert(volService);
 	$.post(volService + "UserInfo", { id: getUser() }, function(data) {
+		alert(data);
 		var d = XML2JSON(data);
 		$("#uname").val(d[0]);
 		$("#name").val(d[1]);
