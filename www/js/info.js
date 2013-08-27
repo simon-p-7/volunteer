@@ -1,5 +1,6 @@
 $(function() {
-	$.get(volService + "UserInfo?id=" + getUser(), null, function(data) {
+	$.support.cors = true;
+	$.post(volService + "UserInfo", { id: getUser() }, function(data) {
 		var d = XML2JSON(data);
 		$("#uname").val(d[0]);
 		$("#name").val(d[1]);
