@@ -18,10 +18,10 @@ $(function() {
             scanner.scan(function(res) {
 				res.cancelled || alert(res.format + ": " + res.text);
             }, function(err) {
-                alert("err: " + err);
+                alert("扫描失败");
             });
         } catch (ex) {
-            alert("ex: " + ex.message);
+            alert("加载扫描驱动失败");
         }
     });
 })
