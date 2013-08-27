@@ -20,7 +20,7 @@ $(function() {
 		$("#head").attr("src", skinPath + d[15]);
 		$("#hour").val(d[16]);
 		var lel = d[17];
-	}, "xml");
+	}, "json");
 	
 	$("nav ul li").click(function(e) {
         redirect(e.target.id + "-activity.html");
