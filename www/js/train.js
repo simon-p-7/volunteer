@@ -1,6 +1,6 @@
 $(function() {
 	var ul = $("article ul").html("");
-	$.post(volService + "Train", null, function(data) {
+	$.get(volService + "Train", null, function(data) {
 		var d = XML2JSON(data);
 		for (var i = 0, arr; arr = d[i++];)
 			ul.append("<li id='t_" + arr[0] + "'>" + arr[1] + " [" + arr[2] + "]</li>");

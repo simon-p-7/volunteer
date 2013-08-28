@@ -1,6 +1,6 @@
 $(function() {
 	var ul = $("article ul").html("");
-	$.post(volService + "Participate", { id: getUser() }, function(data) {
+	$.get(volService + "Participate", { id: getUser() }, function(data) {
 		var d = XML2JSON(data);
 		for (var i = 0, arr; arr = d[i++];)
 			ul.append("<li id='a_" + arr[0] + "'>" + arr[1] + "(时长：" + arr[2] + ") [" + arr[3] + "]</li>");
