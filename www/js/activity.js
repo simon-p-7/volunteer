@@ -28,7 +28,7 @@ $(function() {
 	}, "xml");
 	
 	$("#join").click(function(e) {
-        $.post(volService + "Join", { id: getUser(), pid: aid }, function(data) {
+        $.get(volService + "Join", { id: getUser(), pid: aid }, function(data) {
 			var d = XML2JSON(data);
 			if (d[0] === 0) alert("服务器错误！", null, "对不起", "确 定");
 			else {
