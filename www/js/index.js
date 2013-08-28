@@ -16,7 +16,7 @@ $(function() {
         try {
             var scanner = cordova.require("cordova/plugin/BarcodeScanner");
             scanner.scan(function(res) {
-				res.cancelled || alert(res.format + ": " + res.text);
+				res.cancelled || alert(res.format.toUpperCase() === "QR_CODE" ? res.text : "你扫描仪的不是二维码");
             }, function(err) {
                 alert("扫描失败");
             });
