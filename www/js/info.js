@@ -22,6 +22,6 @@ $(function() {
 	}, "xml");
 	
 	$("nav ul li").click(function(e) {
-        redirect(e.target.id + "-activity.html");
+        redirect("vol/" + e.target.id + "-activity.html");
     });
 });
