@@ -18,7 +18,7 @@ $(function() {
 		$("#exp").val(d[14]);
 		$("#head").attr("src", skinPath + d[15]);
 		$("#hour").val(d[16]);
-		$("star").val(d[17]);
+		$("#star").val(d[17]);
 	}, "xml");
 	
 	$("nav ul li").click(function(e) {
