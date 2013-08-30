@@ -8,8 +8,9 @@ $(function() {
 	$("#btn_li").click(login);
 	
 	function login(e) {
+		setItem("user_type", $("#tem").prop("checked") ? "tem" : "vol");
 		setItem("user_id", "1");
-		redirect("info.html");
+		redirect(getDir() + "info.html");
 	}
 	
 	$("#scan").click(function(e) {
