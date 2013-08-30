@@ -1,5 +1,5 @@
 window.win = window, win.doc = win.document, win.sess = win.sessionStorage, win.host = "http://192.168.1.77:";
-win.serviceHost = host + "12411/", win.volService = serviceHost + "VolunteerWebService.asmx/";
+win.serviceHost = host + "12411/", win.volService = serviceHost + "VolunteerWebService.asmx/", win.temService = serviceHost + "TeamWebService.asmx/";
 win.fileHost = host + "15041/", win.skinPath = fileHost + "Skin/Images/", win.filePath = fileHost + "Upfiles/";
 
 doc.addEventListener("deviceready", function(e) {
@@ -16,7 +16,7 @@ win.XML2JSON = function(data) {
 }
 
 win.goBack = function() {
-	win.history.back();	
+	win.history.back();
 }
 
 win.getUser = function() {
