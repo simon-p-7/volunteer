@@ -9,11 +9,9 @@ $(function() {
 	}, "xml");
 	
 	ul.click(function(e) {
+		alert(e.target.type);
+		
         setItem("activity_id", e.target.id);
 		redirect("activity.html");
-    });
-	
-	ul.find("li button").click(function(e) {
-        alert(e.target.parent.id);
     });
 })
