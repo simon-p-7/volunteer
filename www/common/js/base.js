@@ -34,3 +34,12 @@ win.setItem = function(k, v) {
 win.getItem = function(k) {
 	return sess.getItem(k);
 }
+
+win.sorry = function(msg, func) {
+	alert(msg, func, "对不起", "确 定");
+}
+
+win.getId = function(id, g) {
+	(g === undefined || g === null) && (g = 2);
+	return id.substring(g, id.length);
+}

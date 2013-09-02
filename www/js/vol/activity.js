@@ -1,6 +1,5 @@
 $(function() {
-	var aid = getItem("activity_id");
-	aid = aid.substring(2, aid.length);
+	var aid = getId(getItem("activity_id"));
 	$.get(volService + "Activity", { id: getUser(), pid: aid, had: getItem("activity_had") }, function(data) {
 		var d = XML2JSON(data);
 		d[22] === "0" && $("#join").remove();
@@ -30,7 +29,7 @@ $(function() {
 	$("#join").click(function(e) {
         $.get(volService + "Join", { id: getUser(), pid: aid }, function(data) {
 			var d = XML2JSON(data);
-			if (d[0] === 0) alert("服务器错误！", null, "对不起", "确 定");
+			if (d[0] === 0) sorry("服务器出错！");
 			else {
 				$("#join").hide();
 				$("#participate").val(d[1]);

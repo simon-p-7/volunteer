@@ -12,17 +12,4 @@ $(function() {
 		setItem("user_id", "1");
 		redirect(getDir() + "info.html");
 	}
-	
-	$("#scan").click(function(e) {
-        try {
-            var scanner = cordova.require("cordova/plugin/BarcodeScanner");
-            scanner.scan(function(res) {
-				res.cancelled || alert(res.format.toUpperCase() === "QR_CODE" ? res.text : "你扫描的不是二维码！", null, "对不起", "确 定");
-            }, function(err) {
-                alert("扫描失败");
-            });
-        } catch (ex) {
-            alert("加载扫描驱动失败");
-        }
-    });
 })

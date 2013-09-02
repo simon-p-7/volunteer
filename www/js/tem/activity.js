@@ -1,6 +1,5 @@
 $(function() {
-	var aid = getItem("activity_id");
-	aid = aid.substring(2, aid.length);
+	var aid = getId(getItem("activity_id"));
 	var ul = $("article ul").html("");
 	$.get(temService + "Activity", { pid: aid }, function(data) {
 		var d = XML2JSON(data);
@@ -12,12 +11,10 @@ $(function() {
 	}, "xml");
 	
 	ul.click(function(e) {
-		var uid = getItem("activity_id");
-		uid = uid.substring(2, uid.length);
 		var u = $(e.target);
 		confirm("确定要删除 " + u.html() + " 的服务时长吗？", function(btn) {
-			btn === 1 && $.get(temService + "Delete", { pid: aid, id: uid }, function(data) {
-				XML2JSON(data) ? u.remove() : alert("删除时出错！", null, "对不起", "确 定");
+			btn === 1 && $.get(temService + "Delete", { pid: aid, id: getId(e.target.id) }, function(data) {
+				XML2JSON(data) ? u.remove() : sorry("删除时出错！");
 			}, "xml");
 		}, "提 示", "确 定,取 消");
     });
