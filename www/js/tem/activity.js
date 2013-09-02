@@ -17,7 +17,7 @@ $(function() {
 		var u = $(e.target);
 		confirm("确定要删除 " + u.html() + " 的服务时长吗？", function(btn) {
 			btn === 1 && $.get(temService + "Delete", { pid: aid, id: uid }, function(data) {
-				XML2JSON(data) && u.remove();
+				XML2JSON(data) ? u.remove() : alert("删除时出错！", null, "对不起", "确 定");
 			}, "xml");
 		}, "提 示", "确 定,取 消");
     });
