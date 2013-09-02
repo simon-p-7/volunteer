@@ -9,9 +9,11 @@ $(function() {
 	}, "xml");
 	
 	ul.click(function(e) {
-		alert(e.target.type);
-		
-        setItem("activity_id", e.target.id);
-		redirect("activity.html");
+		if (e.target.type === "button") {
+			alert(e.target.parent.id);
+		} else {
+			setItem("activity_id", e.target.id);
+			redirect("activity.html");
+		}
     });
 })
