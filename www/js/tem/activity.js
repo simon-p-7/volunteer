@@ -10,4 +10,8 @@ $(function() {
 		for (var i = 0, arr; arr = d[3][i++];)
 			ul.append("<li id='u_" + arr[0] + "'>" + arr[1] + "(" + arr[2] + ") [" + arr[3] + "]</li>");
 	}, "xml");
+	
+	ul.click(function(e) {
+        $(e.target).remove();
+    });
 })
