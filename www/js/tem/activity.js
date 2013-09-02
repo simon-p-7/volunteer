@@ -16,10 +16,9 @@ $(function() {
 		uid = uid.substring(2, uid.length);
 		var u = $(e.target);
 		confirm("确定要删除 " + u.html() + " 的服务时长吗？", function(btn) {
-			alert(btn);
-			/*$.get(temService + "Delete", { pid: aid, id: uid }, function(data) {
+			btn === 1 && $.get(temService + "Delete", { pid: aid, id: uid }, function(data) {
 				XML2JSON(data) && u.remove();
-			}, "xml");*/
+			}, "xml");
 		}, "提 示", "确 定,取 消");
     });
 })
