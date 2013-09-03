@@ -29,13 +29,13 @@ $(function() {
 	$("#join").click(function(e) {
         $.get(volService + "Join", { id: getUser(), pid: aid }, function(data) {
 			var d = XML2JSON(data);
-			if (d[0] === 0) sorry("加入时出错！");
-			else {
+			if (d[0]) {
 				$("#join").remove();
 				$("#participate").val(d[1]);
 				$("#detail").val(d[2]);
 				alert("加入成功！", null, "恭喜你", "确 定");
 			}
+			else sorry("加入时出错！");
 		}, "xml");
     });
 })
