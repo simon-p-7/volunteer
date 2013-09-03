@@ -5,17 +5,27 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
 <script src="../phonegap.js"></script>
+<script src="../barcodescanner.js"></script>
 <script src="../common/js/zepto.js"></script>
 <script src="../common/js/base.js"></script>
-<script src="../js/tem/activities.js"></script>
+<script src="../js/tem/scanning.js"></script>
 </head>
 <body>
 	<header>
     	<button onClick="goBack()">&lt;</button>
-        我的活动
+        扫描登记
     </header>
     <article>
-    	<ul></ul>
+    	<h2 id="title"></h2>
+        活动时间：<output id="date"></output><br>
+        活动地点：<output id="location"></output>
+        <hr>
+        姓名：<output id="name"></output><br>
+        身份证：<output id="id"></output>
+        <br><br>
+        <button id="scan">扫 描</button>
+        <br><br>
+        <button id="commit">提 交</button>
     </article>
 </body>
 </html>
