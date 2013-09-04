@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <widget id="vol.mobile" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>volunteer</name>
-    <description>volunteer</description>
+    <name>绍兴志愿者</name>
+    <description>绍兴志愿者网站 http://www.sxvol.com</description>
     <author email="simon.p.7@hotmail.com" href="http://simon7world.wordpress.com/">Simon P. Chang</author>
 	<!-- plugin -->
 	<gap:plugin name="com.phonegap.plugins.barcodescanner" />
     <!-- permission -->
-	<feature name="http://api.phonegap.com/1.0/battery" />
+	<!--<feature name="http://api.phonegap.com/1.0/battery" />
 	<feature name="http://api.phonegap.com/1.0/camera" />
 	<feature name="http://api.phonegap.com/1.0/contacts" />
 	<feature name="http://api.phonegap.com/1.0/file" />
 	<feature name="http://api.phonegap.com/1.0/geolocation" />
-	<feature name="http://api.phonegap.com/1.0/media" />
+	<feature name="http://api.phonegap.com/1.0/media" />-->
 	<feature name="http://api.phonegap.com/1.0/network" />
 	<feature name="http://api.phonegap.com/1.0/notification" />
 	<feature name="http://api.phonegap.com/1.0/device" />
