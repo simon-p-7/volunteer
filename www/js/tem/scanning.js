@@ -6,6 +6,7 @@ $(function() {
 		$("#title").html(d[0]);
 		$("#location").val(d[1]);
 		$("#date").val(d[2]);
+		$("#scan").click();
 	}, "xml");
 	
 	$("#scan").click(function(e) {
@@ -25,13 +26,10 @@ $(function() {
 	$("#commit").click(function(e) {
         $.get(temService + "Recognized", { id: $("#uname").val(), pid: aid }, function(data) {
 			var d = XML2JSON(data);
-			if (d[0] === 0) sorry("此志愿者不存在！\n　或\n重复提交！");
-			else {
-				$("#name").val("");
-				$("#uname").val("");
-				$("#id").val("");
-				d[1] && confirm("须要继续扫描吗？", function(btn) { btn === 1 && $("#scan").click(); }, "提 示", "是,否");
-			}
+			$("#name").val("");
+			$("#uname").val("");
+			$("#id").val("");
+			d[0] === 0 ? sorry("志愿者不存在！\n或\n重复提交！") : d[1] && confirm("提交成功！\n是否须要继续扫描？", function(btn) { btn === 1 && $("#scan").click(); }, "提 示", "是,否");
 			d[1] || remove();
 		}, "xml");
     });
