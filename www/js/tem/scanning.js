@@ -29,7 +29,7 @@ $(function() {
 			$("#name").val("");
 			$("#uname").val("");
 			$("#id").val("");
-			d[0] === 0 ? sorry("志愿者不存在！\n或\n重复提交！") : d[1] && confirm("提交成功！\n是否须要继续扫描？", function(btn) { btn === 1 && $("#scan").click(); }, "提 示", "是,否");
+			d[0] === 0 ? sorry("志愿者不存在！\n或\n重复提交！") : d[1] && confirm("提交成功！\n是否继续扫描？", function(btn) { btn === 1 && $("#scan").click(); }, "提 示", "是,否");
 			d[1] || remove();
 		}, "xml");
     });
