@@ -12,7 +12,7 @@ $(function() {
 	
 	ul.click(function(e) {
 		var u = $(e.target);
-		vibrate(300);
+		vibrate(210);
 		confirm("确定要删除 " + u.html() + " 的服务时长吗？", function(btn) {
 			btn === 1 && $.get(temService + "Delete", { pid: aid, id: getId(e.target.id) }, function(data) {
 				XML2JSON(data) ? u.remove() : sorry("删除时出错！");
