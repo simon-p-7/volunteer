@@ -4,28 +4,31 @@
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+<link rel="stylesheet" href="../common/css/base.css">
+<link rel="stylesheet" href="../css/tem/info.css">
 <script src="../phonegap.js"></script>
 <script src="../common/js/zepto.js"></script>
 <script src="../common/js/base.js"></script>
 <script src="../js/tem/info.js"></script>
 </head>
 <body>
-	<header>
-    	<button onClick="goBack()">&lt;</button>
-        分队长信息
+	<header id="fixed">
+        <div onClick="goBack()">&lt;</div><h1>分队长信息</h1><div></div>
     </header>
-    <nav>
-    	<ul>
-        	<li id="activities">我的活动</li>
-        </ul>
-    </nav>
     <article>
-        <img id="head" alt="头像" width="120" height="120"><br>
-        登录名：<output id="uname"></output><br>
-        姓名：<output id="name"></output><br>
-        所属协会：<output id="asso"></output><br>
-        所属大队：<output id="team"></output><br>
-        所属分队：<output id="squad"></output>
+        <img id="head" alt="头像" width="240" height="240">
+        <header>
+        	<output id="uname"></output><br>
+        	<output id="name" class="gap"></output><br><br>
+            <button type="button" id="activities">我的活动<img src="../img/nx.png"></button>
+        </header>
     </article>
+    <section>
+    	<ul>
+        	<li><span>所属协会</span><output id="asso"></output></li>
+            <li><span>所属大队</span><output id="team"></output></li>
+            <li><span>所属分队</span><output id="squad"></output></li>
+        </ul>
+    </section>
 </body>
 </html>
