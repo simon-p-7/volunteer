@@ -11,9 +11,9 @@ $(function() {
 	}, "xml");
 	
 	ul.click(function(e) {
-		var u = $(e.target.parent);
+		var u = $(e.target.parentNode);
 		vibrate(210);
-		confirm("确定要删除 " + u.find("span").length + " 的服务时长吗？", function(btn) {
+		confirm("确定要删除 " + u.find("span").eq(1).text() + " 的服务时长吗？", function(btn) {
 			btn === 1 && $.get(temService + "Delete", { pid: aid, id: getId(u.attr("id")) }, function(data) {
 				XML2JSON(data) ? u.remove() : sorry("删除时出错！");
 			}, "xml");
