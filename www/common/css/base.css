@@ -30,6 +30,42 @@ h2 {
 	font-size: 2.5em;
 }
 
+input[type='text'],input[type='password'] {
+	border: 0;
+	-webkit-border-radius: 0.2em;
+	width: 100%;
+	font-size: 2.2em;
+	background-color: #fff;
+	color: #1e1f21;
+	padding: 0.5em 0.7em;
+	margin: 0.3em 0;
+}
+
+label {
+	font-size: 2.4em;
+}
+
+button {
+	border: 0;
+	-webkit-border-radius: 0.2em;
+	font-size: 2.2em;
+	background-color: #505259;
+	color: #fff;
+	padding: 0.5em 1em;
+	-webkit-box-shadow: 0 4px 0 #202123;
+	margin: 0.3em 0;
+}
+
+button img {
+	vertical-align: middle;
+	margin-left: 0.7em;
+}
+
+button.main {
+	background-color: #cc162f;
+	-webkit-box-shadow: 0 4px 0 #450b0b;
+}
+
 header[id='fixed'] {
 	position: fixed;
 	top: 0;

@@ -1,0 +1,17 @@
+img[alt='logo'] {
+	margin: 0 auto;
+	display: block;
+}
+
+button {
+	width: 100%;
+}
+
+article {
+	padding-top: 5em;
+}
+
+article div {
+	text-align: center;
+	margin-bottom: 1.5em;
+}
