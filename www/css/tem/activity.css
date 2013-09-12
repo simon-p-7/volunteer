@@ -15,6 +15,9 @@ section ul li {
 section ul li span {
 	display: inline-block;
 	vertical-align: middle;
+}
+
+section ul li span:empty {
 	margin: 0 0.7em;
 	width: 0.5em;
 	height: 0.5em;
@@ -22,9 +25,8 @@ section ul li span {
 	-webkit-border-radius: 0.5em;
 }
 
-section ul li div {
+section ul li span:last-child {
 	float: right;
-	display: inline-block;
 	padding: 0.1em 0.5em;
 	background-color: #5d5e62;
 	-webkit-border-radius: 0.6em;
