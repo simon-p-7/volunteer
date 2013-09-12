@@ -5,7 +5,7 @@ article header {
 
 article img[id='head'] {
 	-webkit-border-radius: 300px;
-	border: #fff solid 0.5em;
+	border: #fff solid 20px;
 	-webkit-box-shadow:0 2px 5px #000;
 }
 
@@ -14,6 +14,33 @@ article header output {
 	line-height: 1.5em;
 }
 
-.gap {
+.color {
 	color: #ccc;
+}
+
+section {
+	padding-top: 1.2em;
+	border: 0;
+}
+
+section ul li {
+	border-bottom: #2b2c2f solid 0.2em;
+	background-color: #222326;
+	width: 100%;
+	font-size: 2em;
+}
+
+section ul li span {
+	display: inline-block;
+	background-color: #1f1f22;
+	color: #ccc;
+	width: 30%;
+	padding: 0.8em 1em;
+	text-align: right;
+}
+
+section ul li div {
+	border-left: #2b2c2f solid 0.2em;
+	display: inline-block;
+	padding: 0.8em 1em;
 }
