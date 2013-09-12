@@ -1,4 +1,6 @@
 $(function() {
+	$("#tem").prop("checked", true);
+	
 	$("#txt_un").keydown(function(e) {
         e.which === 13 && $("#txt_pw").focus();
     });
