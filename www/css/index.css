@@ -15,3 +15,19 @@ article div {
 	text-align: center;
 	margin-bottom: 2.4em;
 }
+
+.checked,.unchecked {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background: url(../img/ro.png) no-repeat;
+	background-position: -32px 0;
+}
+
+.unchecked {
+	background-position: 0px 0;
+}
+
+.gap {
+	padding-left: 0.5em;
+}

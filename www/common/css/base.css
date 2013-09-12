@@ -52,7 +52,7 @@ button {
 	background-color: #505259;
 	color: #fff;
 	padding: 0.5em 1em;
-	-webkit-box-shadow: 0 4px 0 #202123;
+	-webkit-box-shadow: 0 5px 0 #202123;
 	margin: 0.3em 0;
 }
 
@@ -63,7 +63,7 @@ button img {
 
 button.main {
 	background-color: #cc162f;
-	-webkit-box-shadow: 0 4px 0 #450b0b;
+	-webkit-box-shadow: 0 5px 0 #450b0b;
 }
 
 header[id='fixed'] {
@@ -119,4 +119,8 @@ section {
 	float: left;
 	border-top: #232427 solid 0.2em;
 	width: 100%;
+}
+
+.hide {
+	display: none;
 }
