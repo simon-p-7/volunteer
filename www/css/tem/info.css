@@ -19,12 +19,12 @@ article header output {
 }
 
 section {
-	padding-top: 1.2em;
+	padding-top: 1.5em;
 	border: 0;
 }
 
 section ul li {
-	border-bottom: #2b2c2f solid 0.2em;
+	border-bottom: #2b2c2f solid 0.1em;
 	background-color: #222326;
 	width: 100%;
 	font-size: 2em;
@@ -40,7 +40,7 @@ section ul li span {
 }
 
 section ul li div {
-	border-left: #2b2c2f solid 0.2em;
+	border-left: #2b2c2f solid 0.1em;
 	display: inline-block;
 	padding: 0.8em 1em;
 }
