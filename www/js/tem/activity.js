@@ -7,7 +7,7 @@ $(function() {
 		$("#location").val(d[1]);
 		$("#date").val(d[2]);
 		for (var i = 0, arr; arr = d[3][i++];)
-			ul.append("<li id='u_" + arr[0] + "'><div></div>" + arr[1] + " (" + arr[2] + ")<span>" + arr[3] + "</span></li>");
+			ul.append("<li id='u_" + arr[0] + "'><span></span>" + arr[1] + " (" + arr[2] + ")<div>" + arr[3] + "</div></li>");
 	}, "xml");
 	
 	ul.click(function(e) {

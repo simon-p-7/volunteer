@@ -1,0 +1,31 @@
+section {
+	padding: 2em 4em 0 5em;
+}
+
+section ul {
+	border-left: #cc162f solid 0.8em;
+	list-style: none;
+}
+
+section ul li {
+	padding: 0.5em 0;
+	font-size: 2.4em;
+}
+
+section ul li span {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 0.7em;
+	width: 0.5em;
+	height: 0.5em;
+	background-color: #5d5e62;
+	-webkit-border-radius: 0.5em;
+}
+
+section ul li div {
+	float: right;
+	display: inline-block;
+	padding: 0.1em 0.5em;
+	background-color: #5d5e62;
+	-webkit-border-radius: 0.6em;
+}
