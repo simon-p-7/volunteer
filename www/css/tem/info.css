@@ -1,5 +1,6 @@
 article header {
 	padding-left: 2em;
+	width: 50%;
 }
 
 article img[id='head'] {
@@ -9,7 +10,7 @@ article img[id='head'] {
 }
 
 article header output {
-	font-size: 2.4em;
+	font-size: 2.5em;
 	line-height: 1.5em;
 }
 

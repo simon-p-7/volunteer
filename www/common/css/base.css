@@ -104,6 +104,10 @@ article header h2 {
 	line-height: 1.2em;
 }
 
+article header button {
+	font-size: 2em;
+}
+
 article header div {
 	color: #aaa;
 	font-size: 2em;
