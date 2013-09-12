@@ -9,7 +9,7 @@ $(function() {
 		$("#head").attr("src", teamPath + d[5]);
 	}, "xml");
 	
-	$("nav ul li").click(function(e) {
+	$("#activities").click(function(e) {
         redirect(e.target.id + "-manager.html");
     });
 });
