@@ -3,7 +3,6 @@ article header {
 }
 
 article img[id='head'] {
-	background-image: url(../../img/lg.png);
 	-webkit-border-radius: 300px;
 	border: #fff solid 0.5em;
 	-webkit-box-shadow:0 2px 5px #000;
