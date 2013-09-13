@@ -13,7 +13,7 @@ article ul {
 article ul li {
 	float: left;
 	width: 100%;
-	padding: 1.5em 3em 1.5em 5.5em;
+	padding: 1.7em 3em 1.7em 6em;
 	border-bottom: #1d1c1e solid 0.1em;
 	background: url(../../img/ht.png) no-repeat;
 	background-position: 2em 2.2em;
@@ -21,7 +21,7 @@ article ul li {
 
 article ul li span {
 	display: inline-block;
-	width: 77%;
+	width: 75%;
 	font-size: 2.2em;
 }
 
