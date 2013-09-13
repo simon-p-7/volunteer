@@ -21,11 +21,16 @@ section div span {
 	color: #ccc;
 	display: block;
 	font-size: 2.4em;
-	padding: 1em 0;
+	padding: 1.2em 0;
 	line-height: 1.5em;
 }
 
 section div button {
 	width: 50%;
 	margin: 0;
+}
+
+section div button img {
+	margin-left: 0;
+	margin-right: 0.7em;
 }
