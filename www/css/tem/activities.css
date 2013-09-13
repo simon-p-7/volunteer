@@ -1,0 +1,50 @@
+article {
+	padding: 0;
+	padding-top: 6.5em;
+}
+
+article ul {
+	float: left;
+	background-color: #222326;
+	list-style: none;
+	width: 100%;
+}
+
+article ul li {
+	float: left;
+	width: 100%;
+	padding: 1.5em 3em 1.5em 5.5em;
+	border-bottom: #1d1c1e solid 0.1em;
+	background: url(../../img/ht.png) no-repeat;
+	background-position: 2em 2.2em;
+}
+
+article ul li span {
+	display: inline-block;
+	width: 77%;
+	font-size: 2.2em;
+}
+
+article ul li span span {
+	font-size: 0.65em;
+	background-color: #1b1c1e;
+	width: auto;
+	padding: 0.2em 0.6em;
+	color: #ccc;
+	-webkit-border-radius: 1.2em;
+	margin-top: 0.5em;
+}
+
+article ul li span span:last-child {
+	background-color: transparent;
+}
+
+article ul li button {
+	float: right;
+	margin: 0;
+	padding: 0.2em 0.5em;
+}
+
+article ul li button img {
+	margin: 0;
+}

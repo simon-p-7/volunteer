@@ -3,8 +3,8 @@ $(function() {
 	$.get(temService + "Activities", { id: getUser() }, function(data) {
 		var d = XML2JSON(data);
 		for (var i = 0, arr; arr = d[i++];) {
-			var btn = "<button type='button' id='a_" + arr[0] + "'>扫 描</button>";
-			ul.append("<li id='a_" + arr[0] + "'>" + arr[1] + "(" + arr[2] + ") [" + arr[3] + "]" + btn + "</li>");
+			var btn = "<button type='button' id='a_" + arr[0] + "'><img src='../img/qr.png'></button>";
+			ul.append("<li id='a_" + arr[0] + "'><span>" + arr[1] + "<br><span>" + arr[3] + "</span><span>" + arr[2] + "</span></span>" + btn + "</li>");
 		}
 	}, "xml");
 	
