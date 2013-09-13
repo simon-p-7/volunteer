@@ -4,8 +4,7 @@ article header {
 }
 
 article img[id='head'] {
-	-webkit-border-radius: 300px;
-	border: #fff groove 0.5em;
+	-webkit-border-radius: 240px;
 	-webkit-box-shadow:0 2px 5px #000;
 }
 
@@ -34,7 +33,7 @@ section ul li span {
 	display: inline-block;
 	background-color: #1f1f22;
 	color: #ccc;
-	width: 25%;
+	width: 28%;
 	padding: 0.7em 0.9em;
 	text-align: right;
 }

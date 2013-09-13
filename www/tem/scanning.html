@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+<link rel="stylesheet" href="../common/css/base.css">
+<link rel="stylesheet" href="../css/tem/scanning.css">
 <script src="../phonegap.js"></script>
 <script src="../barcodescanner.js"></script>
 <script src="../common/js/zepto.js"></script>
@@ -11,22 +13,29 @@
 <script src="../js/tem/scanning.js"></script>
 </head>
 <body>
-	<header>
-    	<button onClick="goBack()">&lt;</button>
-        扫描登记
+    <header id="fixed">
+        <div onClick="goBack()">&lt;</div><h1>扫描登记</h1><div></div>
     </header>
     <article>
-    	<h2 id="title"></h2>
-        活动时间：<output id="date"></output><br>
-        活动地点：<output id="location"></output>
-        <hr>
-        姓名：<output id="name"></output><br>
-        身份证：<output id="id"></output>
-        <input id="uname" type="hidden">
-        <br><br>
-        <button id="scan">扫 描</button>
-        <br><br>
-        <button id="commit">提 交</button>
+    	<img src="../img/ai.png" width="93" height="93">
+        <header>
+    		<h2 id="title"></h2>
+            <div>
+        		活动时间：<output id="date"></output><br>
+        		活动地点：<output id="location"></output>
+            </div>
+        </header>
     </article>
+    <section>
+    	<div>
+            <img alt="head" src="../img/hd.png" width="320" height="320">
+            <span>
+            	姓　名：<output id="name"></output><br>
+            	身份证：<output id="id"></output>
+            </span>
+            <button id="scan">扫 描<img src="../img/rq.png"></button><button id="commit" class="main">提 交<img src="../img/ct.png"></button>
+            <input id="uname" type="hidden">
+		</div>
+    </section>
 </body>
 </html>
