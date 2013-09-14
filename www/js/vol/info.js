@@ -1,4 +1,6 @@
 $(function() {
+	doc.addEventListener("backbutton", ask, false);
+	
 	$.get(volService + "UserInfo", { id: getUser() }, function(data) {
 		var d = XML2JSON(data);
 		$("#uname").val(d[0]);
@@ -25,3 +27,7 @@ $(function() {
         redirect(e.target.id + "-activity.html");
     });
 });
+
+function ask() {
+	confirm("真的要退出吗？", function(btn) { btn === 1 && nav.app.exitApp(); }, "提 示", "是,否");
+}
