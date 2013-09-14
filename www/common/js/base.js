@@ -43,3 +43,19 @@ win.getId = function(id, g) {
 	(g === undefined || g === null) && (g = 2);
 	return id.substring(g, id.length);
 }
+
+win.ajaxGet = function(url, data, func, sync) {
+	$.ajax({
+		"type": "GET",
+		"url": url,
+		"data": data,
+		"dataType": "xml",
+		"async": !sync,
+		"timeout": 700,
+		"global": false,
+		"success": func,
+		"error": function(xhr, type, err) {
+			sorry("网络不给力！\n 或\n服务器出错！");
+		}
+	});
+}
