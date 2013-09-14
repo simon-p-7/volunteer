@@ -18,6 +18,7 @@ $(function() {
 						ajaxGet(temService + "Check", {id: p[1]}, function(data) {
 							var d = XML2JSON(data);
 							if (d[0] && d[1] === p[0] && d[2].toUpperCase() === p[2].toUpperCase()) {
+								$("#head").attr("src", skinPath + d[3]);
 								$("#name").val(p[0]);
 								$("#uname").val(p[1]);
 								$("#id").val(p[2]);
@@ -34,6 +35,7 @@ $(function() {
 		else {
 			$.get(temService + "Recognized", { id: uid , pid: aid }, function(data) {
 				var d = XML2JSON(data);
+				$("#head").attr("src", "../img/hd.png");
 				$("#name").val("");
 				$("#uname").val("");
 				$("#id").val("");

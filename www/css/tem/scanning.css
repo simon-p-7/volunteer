@@ -10,7 +10,7 @@ section div {
 	padding-top: 5em;
 }
 
-section div img[alt='head'] {
+section div #head {
 	display: block;
 	margin: 0 auto;
 	-webkit-border-radius: 320px;
