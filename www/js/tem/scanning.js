@@ -15,8 +15,9 @@ $(function() {
 				if (!res.cancelled)
 					if (res.format.toUpperCase() === "QR_CODE") {
 						var p = res.text.split("#");
-						ajaxGet(temService + "Check", {id: p[2]}, function(data) {
-							if (XML2JSON(data)) {
+						ajaxGet(temService + "Check", {id: p[1]}, function(data) {
+							var d = XML2JSON(data);
+							if (d[0] && d[1] === p[0] && d[2].toUpperCase() === p[2].toUpperCase()) {
 								$("#name").val(p[0]);
 								$("#uname").val(p[1]);
 								$("#id").val(p[2]);
@@ -28,14 +29,18 @@ $(function() {
     });
 	
 	$("#commit").click(function(e) {
-        $.get(temService + "Recognized", { id: $("#uname").val(), pid: aid }, function(data) {
-			var d = XML2JSON(data);
-			$("#name").val("");
-			$("#uname").val("");
-			$("#id").val("");
-			d[0] === 0 ? sorry("请不要重复提交！") : d[1] && confirm("提交成功！\n是否继续扫描？", function(btn) { btn === 1 && $("#scan").click(); }, "提 示", "是,否");
-			d[1] || remove();
-		}, "xml");
+		var uid = $("#uname").val();
+		if (uid === "") sorry("请先扫描志愿者！");
+		else {
+			$.get(temService + "Recognized", { id: uid , pid: aid }, function(data) {
+				var d = XML2JSON(data);
+				$("#name").val("");
+				$("#uname").val("");
+				$("#id").val("");
+				d[0] === 0 ? sorry("请不要重复提交！") : d[1] && confirm("提交成功！\n是否继续扫描？", function(btn) { btn === 1 && $("#scan").click(); }, "提 示", "是,否");
+				d[1] || remove();
+			}, "xml");
+		}
     });
 	
 	function remove() {

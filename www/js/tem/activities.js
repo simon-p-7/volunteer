@@ -10,8 +10,8 @@ $(function() {
 	
 	ul.click(function(e) {
 		var tag = e.target;
-		if (tag.nodeName !== "LI") {
-			while (tag.parentNode.nodeName !== "LI") tag = tag.parentNode;
+		if (tag.nodeName.toUpperCase() !== "LI") {
+			while (tag.parentNode.nodeName.toUpperCase() !== "LI") tag = tag.parentNode;
 			tag = tag.parentNode;
 		}
 		setItem("activity_id", tag.id);
