@@ -23,7 +23,7 @@ $(function() {
 		$("#star").val(d[17]);
 	}, "xml");
 	
-	$("nav ul li").click(function(e) {
+	$("button").click(function(e) {
         redirect(e.target.id + "-activity.html");
     });
 });
