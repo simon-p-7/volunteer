@@ -30,6 +30,10 @@ h2 {
 	font-size: 2.5em;
 }
 
+ul {
+	list-style: none;
+}
+
 input[type='text'],input[type='password'] {
 	border: 0;
 	-webkit-border-radius: 0.2em;
