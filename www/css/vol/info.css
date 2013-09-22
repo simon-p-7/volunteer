@@ -14,13 +14,19 @@ nav ul li {
 	width: 50%;
 	font-size: 2.2em;
 	text-align: center;
-	padding: 0.8em 0;
+	padding: 0.9em 0;
+	border-top: #2b2c2f solid 0.1em;
+}
+
+nav ul li img {
+	vertical-align: middle;
+	margin-right: 0.5em;
 }
 
 nav ul li:first-child {
-	border-right: #2b2c2f solid 0.07em;
+	border-right: #2b2c2f solid 0.05em;
 }
 
 nav ul li:last-child {
-	border-left: #2b2c2f solid 0.07em;
+	border-left: #2b2c2f solid 0.05em;
 }
