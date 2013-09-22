@@ -1,5 +1,7 @@
 $(function() {
-	doc.addEventListener("backbutton", ask, false);
+	var iid = window.setInterval(function(e) {
+		PhoneGap.available && (window.clearInterval(iid), doc.addEventListener("backbutton", ask, false));
+	}, 210);
 	
 	$.get(temService + "UserInfo", { id: getUser() }, function(data) {
 		var d = XML2JSON(data);
