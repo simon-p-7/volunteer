@@ -26,7 +26,7 @@ $(function() {
 		$("#star").val(d[17]);
 	}, "xml");
 	
-	$("button").click(function(e) {
+	$("button,nav ul li").click(function(e) {
         redirect(e.target.id + "-activity.html");
     });
 });

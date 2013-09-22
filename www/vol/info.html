@@ -6,6 +6,7 @@
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
 <link rel="stylesheet" href="../common/css/base.css">
 <link rel="stylesheet" href="../css/tem/info.css">
+<link rel="stylesheet" href="../css/vol/info.css">
 <script src="../phonegap.js"></script>
 <script src="../common/js/zepto.js"></script>
 <script src="../common/js/base.js"></script>
@@ -20,7 +21,7 @@
         <header>
         	<output id="uname"></output><br>
         	<output id="name" class="color"></output><br><br>
-            <button type="button" id="participate">所有活动<img src="../img/nx.png"></button>
+            <button type="button" id="launch">所有活动<img src="../img/nx.png"></button>
         </header>
     </article>
     <section>
@@ -42,10 +43,10 @@
             <li><span>服务经历</span><div><output id="exp"></output></div></li>
         </ul>
     </section>
-    <nav>
+    <nav id="fixed">
     	<ul>
-            <li id="apply">已报名的活动</li>
-            <li id="launch">已参与的活动</li>
+            <li id="apply">已报名的</li>
+            <li id="participate">已参与的</li>
         </ul>
     </nav>
 </body>
