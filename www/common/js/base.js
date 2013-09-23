@@ -51,7 +51,7 @@ win.ajaxGet = function(url, data, func, sync) {
 		"data": data,
 		"dataType": "xml",
 		"async": !sync,
-		"timeout": 700,
+		"timeout": 7000,
 		"global": false,
 		"success": func,
 		"error": function(xhr, type, err) {
