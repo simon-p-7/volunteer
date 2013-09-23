@@ -5,7 +5,7 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
 <link rel="stylesheet" href="../common/css/base.css">
-<link rel="stylesheet" href="../css/tem/info.css">
+<link rel="stylesheet" href="../css/vol/activity.css">
 <script src="../phonegap.js"></script>
 <script src="../common/js/zepto.js"></script>
 <script src="../common/js/base.js"></script>
@@ -13,15 +13,14 @@
 </head>
 <body>
 	<header id="fixed">
-        <div onClick="goBack()">&lt;</div><h1>活动详情</h1><div id="join">加入</div>
+        <div onClick="goBack()">&lt;</div><h1>活动详情</h1><div></div>
     </header>
     <article>
     	<img src="../img/ai.png" width="93" height="93">
         <header>
     		<h2 id="title"></h2>
             <div>
-        		活动时间：<output id="date"></output><br>
-        		活动地点：<output id="location"></output>
+            	<button id="join">+　我要加入</button>
             </div>
         </header>
     </article>
@@ -39,13 +38,15 @@
             <li></li>
             <li><span>服务类型</span><div><output id="type"></output></div></li>
             <li><span>活动人数</span><div><output id="number"></output></div></li>
+			<li><span>活动时间</span><div><output id="date"></output></div></li>
+            <li><span>活动地点</span><div><output id="location"></output></div></li>
             <li><span>活动时长</span><div><output id="long"></output></div></li>
             <li><span>活动面向</span><div><output id="target"></output></div></li>
             <li><span>状态</span><div><output id="status"></output></div></li>
             <li><span>活动内容</span><div><output id="content"></output></div></li>
             <li><span>报名时间</span><div><output id="time"></output></div></li>
             <li><span>附件</span><div><a id="attachment" href="#">无附件</a></div></li>
-            <li><span>已参与人数</span><div><output id="participate"></output></div></li>
+            <li><span>已参与</span><div><output id="participate"></output>人</div></li>
             <li><span>报名详情</span><div><output id="detail"></output></div></li>
         </ul>
     </section>
