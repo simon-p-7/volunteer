@@ -3,7 +3,7 @@ $(function() {
 		PhoneGap.available && (window.clearInterval(iid), doc.addEventListener("backbutton", ask, false));
 	}, 210);
 	
-	$.get(temService + "UserInfo", { id: getUser() }, function(data) {
+	ajaxGet(temService + "UserInfo", { id: getUser() }, function(data) {
 		var d = XML2JSON(data);
 		$("#uname").val(d[0]);
 		$("#name").val(d[1]);
@@ -11,7 +11,7 @@ $(function() {
 		$("#team").val(d[3]);
 		$("#squad").val(d[4]);
 		$("#head").attr("src", teamPath + d[5]);
-	}, "xml");
+	});
 	
 	$("#activities").click(function(e) {
         redirect(e.target.id + "-manager.html");
