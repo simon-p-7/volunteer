@@ -23,4 +23,5 @@ section ul li div {
 	border-left: #2b2c2f solid 0.1em;
 	display: inline-block;
 	padding: 0.7em 0.9em;
+	overflow: hidden;
 }
