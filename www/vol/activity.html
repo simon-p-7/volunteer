@@ -4,40 +4,50 @@
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+<link rel="stylesheet" href="../common/css/base.css">
+<link rel="stylesheet" href="../css/tem/info.css">
 <script src="../phonegap.js"></script>
 <script src="../common/js/zepto.js"></script>
 <script src="../common/js/base.js"></script>
 <script src="../js/vol/activity.js"></script>
 </head>
 <body>
-	<header>
-    	<button onClick="goBack()">&lt;</button>
-        活动详情
+	<header id="fixed">
+        <div onClick="goBack()">&lt;</div><h1>活动详情</h1><div id="join">加入</div>
     </header>
     <article>
-    	<h2 id="title"></h2>
-        发起单位：<output id="unit"></output><br>
-        组织单位：<output id="array"></output><br>
-        联系人：<output id="contact"></output><br>
-        联系方式：<output id="phone"></output><br>
-        所属大队：<output id="team"></output><br>
-        所属分队：<output id="squad"></output><br>
-        招募地点：<output id="recruit"></output><br>
-        岗位要求：<output id="claim"></output><br>
-        <hr>
-        活动类别：<output id="type"></output><br>
-        活动时间：<output id="date"></output><br>
-        活动人数：<output id="number"></output><br>
-        活动时长：<output id="long"></output><br>
-        活动面向：<output id="target"></output><br>
-        状态：<output id="status"></output><br>
-        活动地点：<output id="location"></output><br>
-        活动内容：<output id="content"></output><br>
-        报名时间：<output id="time"></output><br>
-        附件：<a id="attachment" href="#">无附件</a><br>
-        已参与人数：<output id="participate"></output><br>
-        报名详情：<output id="detail"></output><br>
-        <button id="join">我要加入</button>
+    	<img src="../img/ai.png" width="93" height="93">
+        <header>
+    		<h2 id="title"></h2>
+            <div>
+        		活动时间：<output id="date"></output><br>
+        		活动地点：<output id="location"></output>
+            </div>
+        </header>
     </article>
+    <section>
+    	<ul>
+        	<li></li>
+            <li><span>发起单位</span><div><output id="unit"></output></div></li>
+            <li><span>组织单位</span><div><output id="array"></output></div></li>
+            <li><span>联系人</span><div><output id="contact"></output></div></li>
+        	<li><span>联系方式</span><div><output id="phone"></output></div></li>
+            <li><span>所属大队</span><div><output id="team"></output></div></li>
+            <li><span>所属分队</span><div><output id="squad"></output></div></li>
+            <li><span>招募地点</span><div><output id="recruit"></output></div></li>
+            <li><span>岗位要求</span><div><output id="claim"></output></div></li>
+            <li></li>
+            <li><span>服务类型</span><div><output id="type"></output></div></li>
+            <li><span>活动人数</span><div><output id="number"></output></div></li>
+            <li><span>活动时长</span><div><output id="long"></output></div></li>
+            <li><span>活动面向</span><div><output id="target"></output></div></li>
+            <li><span>状态</span><div><output id="status"></output></div></li>
+            <li><span>活动内容</span><div><output id="content"></output></div></li>
+            <li><span>报名时间</span><div><output id="time"></output></div></li>
+            <li><span>附件</span><div><a id="attachment" href="#">无附件</a></div></li>
+            <li><span>已参与人数</span><div><output id="participate"></output></div></li>
+            <li><span>报名详情</span><div><output id="detail"></output></div></li>
+        </ul>
+    </section>
 </body>
 </html>
