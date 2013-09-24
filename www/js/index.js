@@ -1,4 +1,6 @@
 $(function() {
+	doc.addEventListener("backbutton", ask, false);
+	
 	$("#tem").prop("checked", true);
 	
 	$("#txt_un").keydown(function(e) {
