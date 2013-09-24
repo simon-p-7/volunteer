@@ -20,18 +20,20 @@ $(function() {
     });
 	
 	function login(e) {
-		var isTem = $("#tem").prop("checked");
-		ajaxGet((isTem ? temService : volService) + "Login", {
-			un: $("#txt_un").val(), pw: $("#txt_pw").val()
-		}, function(data) {
-			var d = XML2JSON(data);
-			if (d === null) sorry("登录失败！");
-			else {
-				setItem("user_type", isTem ? "tem" : "vol");
-				setItem("user_id", d);
-				redirect(getDir() + "info.html");
-			}
-			$("#txt_pw").val("");
-		}, true);
+		var unv = $("#txt_un").val(), pwv = $("#txt_pw").val();
+		if (unv === "" || pwv === "") sorry("请先输入帐号和密码！");
+		else {
+			var isTem = $("#tem").prop("checked");
+			ajaxGet((isTem ? temService : volService) + "Login", { un: unv, pw: pwv}, function(data) {
+				var d = XML2JSON(data);
+				if (d === null) sorry("登录失败！");
+				else {
+					setItem("user_type", isTem ? "tem" : "vol");
+					setItem("user_id", d);
+					redirect(getDir() + "info.html");
+				}
+				$("#txt_pw").val("");
+			}, true);
+		}
 	}
 })
