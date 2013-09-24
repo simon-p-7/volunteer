@@ -1,5 +1,6 @@
+doc.addEventListener("backbutton", ask, false);
+
 $(function() {
-	doc.addEventListener("backbutton", ask, false);
 	
 	ajaxGet(volService + "UserInfo", { id: getUser() }, function(data) {
 		var d = XML2JSON(data);
