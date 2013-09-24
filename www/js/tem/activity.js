@@ -1,3 +1,4 @@
+needAsk = false;
 $(function() {
 	var aid = getId(getItem("activity_id"));
 	var ul = $("section ul").html("");
