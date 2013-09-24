@@ -31,6 +31,7 @@ $(function() {
 				setItem("user_id", d);
 				redirect(getDir() + "info.html");
 			}
+			$("#txt_pw").val("");
 		}, true);
 	}
 })
