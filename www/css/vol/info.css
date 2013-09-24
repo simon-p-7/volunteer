@@ -2,10 +2,11 @@ section {
 	padding-bottom: 9em;
 }
 
-nav[id='fixed'] {
+nav {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
+	-webkit-box-shadow:0 -2px 5px #000;
 }
 
 nav ul li {
