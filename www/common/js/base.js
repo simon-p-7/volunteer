@@ -41,7 +41,10 @@ win.sorry = function(msg, func) {
 }
 
 win.ask = function() {
-	confirm("真的要退出吗？", function(btn) { btn === 1 && nav.app.exitApp(); }, "提 示", "是,否");
+	doc.addEventListener("backbutton", function(e) {
+		confirm("真的要退出吗？", function(btn) { btn === 1 && nav.app.exitApp(); }, "提 示", "是,否");
+	}, false);
+	
 }
 
 win.getId = function(id, g) {
@@ -56,7 +59,7 @@ win.ajaxGet = function(url, data, func, sync) {
 		"data": data,
 		"dataType": "xml",
 		"async": !sync,
-		"timeout": 12000,
+		"timeout": 21000,
 		"global": false,
 		"success": func,
 		"error": function(xhr, type, err) {

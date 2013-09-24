@@ -1,6 +1,5 @@
-ready = function() {
-	doc.addEventListener("backbutton", ask, false);
-}
+ready = ask;
+
 $(function() {
 	ajaxGet(temService + "UserInfo", { id: getUser() }, function(data) {
 		var d = XML2JSON(data);

@@ -1,6 +1,5 @@
-ready = function() {
-	doc.addEventListener("backbutton", ask, false);
-}
+ready = ask;
+
 $(function() {
 	$("#tem").prop("checked", true);
 	
