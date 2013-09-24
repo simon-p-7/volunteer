@@ -1,5 +1,4 @@
 needAsk = true;
-
 $(function() {
 	$("#tem").prop("checked", true);
 	

@@ -1,3 +1,4 @@
+needAsk = false;
 $(function() {
 	var ul = $("article ul").html("");
 	ajaxGet(volService + "Launch", null, function(data) {

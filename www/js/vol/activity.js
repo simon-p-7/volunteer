@@ -1,3 +1,4 @@
+needAsk = false;
 $(function() {
 	var aid = getId(getItem("activity_id"));
 	ajaxGet(volService + "Activity", { id: getUser(), pid: aid, had: getItem("activity_had") }, function(data) {
