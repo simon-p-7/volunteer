@@ -1,6 +1,10 @@
 $(function() {
 	$("#tem").prop("checked", true);
 	
+	$("body").click(function(e) {
+        $("article").css("margin-top", e.target.type ? "-17em" : "0");
+    });
+	
 	$("#txt_un").keydown(function(e) {
         e.which === 13 && $("#txt_pw").focus();
     });
