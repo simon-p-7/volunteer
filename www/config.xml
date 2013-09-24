@@ -5,37 +5,27 @@
     <author email="simon.p.7@hotmail.com" href="http://simon7world.wordpress.com/">Simon P. Chang</author>
 	<!-- plugin -->
 	<gap:plugin name="com.phonegap.plugins.barcodescanner" />
-    <!-- permission -->
-	<!--<feature name="http://api.phonegap.com/1.0/battery" />
-	<feature name="http://api.phonegap.com/1.0/camera" />
-	<feature name="http://api.phonegap.com/1.0/contacts" />
-	<feature name="http://api.phonegap.com/1.0/file" />
-	<feature name="http://api.phonegap.com/1.0/geolocation" />
-	<feature name="http://api.phonegap.com/1.0/media" />-->
+    <!-- Permission -->
 	<feature name="http://api.phonegap.com/1.0/network" />
 	<feature name="http://api.phonegap.com/1.0/notification" />
 	<feature name="http://api.phonegap.com/1.0/device" />
-	<!-- Common Specific -->
+	<!-- Common -->
 	<preference name="phonegap-version" value="2.9.0" />
     <preference name="orientation" value="portrait" />
-    <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
-	<!-- iOS Specific -->
-    <preference name="webviewbounce" value="true" />
-    <preference name="prerendered-icon" value="true" />
-    <preference name="stay-in-webview" value="false" />
+	<!-- iOS -->
+	<preference name="target-device" value="handset" />
     <preference name="ios-statusbarstyle" value="black-opaque" />
-    <preference name="detect-data-types" value="true" />
-    <preference name="exit-on-suspend" value="false" />
+    <preference name="detect-data-types" value="false" />
+    <preference name="exit-on-suspend" value="true" />
     <preference name="show-splash-screen-spinner" value="true" />
     <preference name="auto-hide-splash-screen" value="true" />
-	<!-- BlackBerry Specific -->
-    <preference name="disable-cursor" value="false" />
-	<!-- Android Specific -->
+	<!-- BlackBerry -->
+    <preference name="disable-cursor" value="true" />
+	<!-- Android -->
     <preference name="android-minSdkVersion" value="8" />
     <preference name="android-installLocation" value="auto" />
 	<preference name="splash-screen-duration" value="4000" />
-	<preference name="load-url-timeout" value="30000" />
 	<!-- Icon -->
     <icon src="res/icon/icon.png" />
     <icon gap:density="ldpi" gap:platform="android" src="res/icon/android/icon-36-ldpi.png" />
@@ -62,6 +52,9 @@
     <gap:splash gap:platform="ios" height="1024" src="res/screen/ios/screen-ipad-portrait.png" width="768" />
     <gap:splash gap:platform="ios" height="768" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
-	
-    <access origin="*" />
+	<!-- Access -->
+    <access origin="http://192.168.1.77" />
+	<!-- Build -->
+	<gap:platform name="ios" />
+	<gap:platform name="android" />
 </widget>
