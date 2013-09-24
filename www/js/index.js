@@ -17,8 +17,17 @@ $(function() {
     });
 	
 	function login(e) {
-		setItem("user_type", $("#tem").prop("checked") ? "tem" : "vol");
-		setItem("user_id", "1");
-		redirect(getDir() + "info.html");
+		var isTem = $("#tem").prop("checked");
+		ajaxGet((isTem ? temService : volService) + "Login", {
+			un: $("#txt_un").val(), pw: $("#txt_pw").val()
+		}, function(data) {
+			var d = XML2JSON(data);
+			if (d === "") sorry("登录失败！");
+			else {
+				setItem("user_type", isTem ? "tem" : "vol");
+				setItem("user_id", d);
+				redirect(getDir() + "info.html");
+			}
+		}, true);
 	}
 })
