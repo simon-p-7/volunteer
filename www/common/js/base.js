@@ -5,6 +5,7 @@ win.fileHost = host + "15041/", win.skinPath = fileHost + "Skin/Images/", win.fi
 doc.addEventListener("deviceready", function(e) {
 	navigator.notification && (win.nav = navigator, win.alert = nav.notification.alert, win.confirm = nav.notification.confirm, win.vibrate = nav.notification.vibrate);
 	nav.connection.type == Connection.NONE && sorry("网络连接不可用，请检查！", nav.app.exitApp);
+	doc.addEventListener("backbutton", ask, false);
 }, false);
 
 win.redirect = function(h) {
@@ -37,6 +38,10 @@ win.getItem = function(k) {
 
 win.sorry = function(msg, func) {
 	alert(msg, func, "对不起", "确 定");
+}
+
+win.ask = function() {
+	confirm("真的要退出吗？", function(btn) { btn === 1 && nav.app.exitApp(); }, "提 示", "是,否");
 }
 
 win.getId = function(id, g) {
