@@ -1,4 +1,4 @@
-ready = ask;
+needAsk = true;
 
 $(function() {	
 	ajaxGet(volService + "UserInfo", { id: getUser() }, function(data) {
