@@ -41,7 +41,7 @@ win.sorry = function(msg, func) {
 }
 
 win.ask = function() {
-	confirm("真的要退出吗？", function(btn) { btn === 1 && nav.app.exitApp(); }, "提 示", "是,否");
+	confirm("您须要“注销当前用户”还是“退出程序”？", function(btn) { btn === 1 ? nav.app.exitApp() : goBack(); }, "提 示", "退 出,注 销");
 }
 
 win.getId = function(id, g) {

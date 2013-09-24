@@ -35,7 +35,7 @@ $(function() {
 				$("#join").remove();
 				$("#participate").val(d[1]);
 				$("#detail").val(d[2]);
-				alert("加入成功！", null, "恭喜你", "确 定");
+				alert("加入成功！", null, "恭喜您", "确 定");
 			}
 		});
     });

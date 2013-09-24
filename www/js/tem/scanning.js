@@ -24,7 +24,7 @@ $(function() {
 								$("#id").val(p[2]);
 							} else sorry("该志愿者不存在！")
 						}, true);
-					} else sorry("你扫描的不是二维码！");
+					} else sorry("您扫描的不是二维码！");
 			}, function(err) { sorry("扫描失败！"); });
 		} catch (ex) { sorry("加载扫描驱动失败！"); }
     });
