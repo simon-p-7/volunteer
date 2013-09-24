@@ -20,7 +20,8 @@ $(function() {
 		$("#location").val(d[14]);
 		$("#status").val(d[15]);
 		$("#date").val(d[16]);
-		$("#time").val(d[17] + " - " + d[18]);
+		$("#time1").val(d[17]);
+		$("#time2").val(d[18]);
 		$("#participate").val(d[19]);
 		$("#detail").val(d[20]);
 		d[21] && $("#attachment").attr("href", filePath + d[21]).html("点击下载");
