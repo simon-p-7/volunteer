@@ -1,8 +1,10 @@
+needAsk = true;
+
 $(function() {
 	$("#tem").prop("checked", true);
 	
 	$("body").click(function(e) {
-        $("article").css("margin-top", (e.target.type && e.target.type !== "radio") ? "-15.5em" : "0");
+        $("article").css("margin-top", e.target.type === "text" || e.target.type === "password" ? "-15.5em" : "0");
     });
 	
 	$("#txt_un").keydown(function(e) {
@@ -24,7 +26,7 @@ $(function() {
 			un: $("#txt_un").val(), pw: $("#txt_pw").val()
 		}, function(data) {
 			var d = XML2JSON(data);
-			if (!d) sorry("登录失败！");
+			if (d === null) sorry("登录失败！");
 			else {
 				setItem("user_type", isTem ? "tem" : "vol");
 				setItem("user_id", d);
