@@ -2,8 +2,6 @@ ready = function() {
 	doc.addEventListener("backbutton", ask, false);
 }
 $(function() {
-	alert(PhoneGap.available);
-	
 	$("#tem").prop("checked", true);
 	
 	$("#txt_un").keydown(function(e) {
