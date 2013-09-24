@@ -1,5 +1,3 @@
-needAsk = true;
-
 $(function() {
 	$("#tem").prop("checked", true);
 	
@@ -22,6 +20,7 @@ $(function() {
 			un: $("#txt_un").val(), pw: $("#txt_pw").val()
 		}, function(data) {
 			var d = XML2JSON(data);
+			alert(d);
 			if (d === undefined) sorry("登录失败！");
 			else {
 				setItem("user_type", isTem ? "tem" : "vol");
