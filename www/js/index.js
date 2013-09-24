@@ -2,7 +2,7 @@ $(function() {
 	$("#tem").prop("checked", true);
 	
 	$("body").click(function(e) {
-        $("article").css("margin-top", e.target.type && e.target.type !== "radio" ? "-17em" : "0");
+        $("article").css("margin-top", e.target.type && e.target.type !== "radio" ? "-15em" : "0");
     });
 	
 	$("#txt_un").keydown(function(e) {
