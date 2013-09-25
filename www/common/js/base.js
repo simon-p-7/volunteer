@@ -44,6 +44,11 @@ win.ask = function() {
 	confirm("您真的要退出程序吗？", function(btn) { btn === 1 && nav.app.exitApp() }, "提 示", "是,否");
 }
 
+win.logout = function() {
+	sess.clear();
+	goBack();
+}
+
 win.getId = function(id, g) {
 	(g === undefined || g === null) && (g = 2);
 	return id.substring(g, id.length);
