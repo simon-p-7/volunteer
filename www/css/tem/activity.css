@@ -8,12 +8,12 @@ section ul {
 
 section ul li {
 	padding: 0.5em 0;
-	font-size: 2.2em;
 }
 
 section ul li span {
 	display: inline-block;
 	vertical-align: middle;
+	font-size: 2.2em;
 }
 
 section ul li span:empty {
