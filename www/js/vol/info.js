@@ -23,6 +23,7 @@ $(function() {
 	});
 	
 	$("button,nav ul li").click(function(e) {
-        redirect(e.target.id + "-activity.html");
+		var tag = e.target;
+        redirect((tag.nodeName.toUpperCase() === "IMG" ? tag.parentNode.id : tar.id) + "-activity.html");
     });
 });
