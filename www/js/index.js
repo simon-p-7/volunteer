@@ -17,7 +17,8 @@ $(function() {
 	$("#vol,#tem").change(function(e) {
         $(e.target).next().removeClass("unchecked").addClass("checked");
 		$("#" + (e.target.id == "vol" ? "tem" : "vol")).next().removeClass("checked").addClass("unchecked");
-    });
+    	$("#txt_pw,#txt_un").val("");
+	});
 	
 	function login(e) {
 		$("article").css("margin-top", "0");
