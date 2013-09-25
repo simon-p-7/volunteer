@@ -81,12 +81,12 @@ header[id='fixed'] {
 
 header[id='fixed'] h1 {
 	display: inline-block;
-	width: 80%;
+	width: 70%;
 }
 
 header[id='fixed'] div {
 	display: inline-block;
-	width: 10%;
+	width: 15%;
 	font-size: 3.2em;
 	font-weight: bold;
 	text-align: center;
