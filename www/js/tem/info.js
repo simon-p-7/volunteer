@@ -12,6 +12,6 @@ $(function() {
 	
 	$("#activities").click(function(e) {
 		var tag = e.target;
-        redirect((tag.nodeName.toUpperCase() === "IMG" ? tag.parentNode.id : tar.id) + "-manager.html");
+        redirect((tag.nodeName.toUpperCase() === "IMG" ? tag.parentNode.id : tag.id) + "-manager.html");
     });
 });
