@@ -5,7 +5,6 @@
 	box-sizing: border-box;
 	word-break: break-all;
 	letter-spacing: 1px;
-	font-size: 11px;
 }
 
 html,body {
@@ -133,4 +132,22 @@ section {
 
 .hide {
 	display: none;
+}
+
+@media screen and (min-width: 480px) {
+* {
+	font-size: 11px;
+}
+}
+
+@media screen and (min-width: 640px) {
+* {
+	font-size: 16px;
+}
+}
+
+@media screen and (min-width: 1080px) {
+* {
+	font-size: 21px;
+}
 }
