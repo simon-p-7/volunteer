@@ -3,7 +3,7 @@ $(function() {
 	$("#tem").prop("checked", true);
 	
 	$("body").click(function(e) {
-        $("article").css("margin-top", e.target.type === "text" || e.target.type === "password" ? "-15.5em" : "0");
+        $("article").css("margin-top", e.target.type === "text" || e.target.type === "password" ? "-16em" : "0");
     });
 	
 	$("#txt_un").keydown(function(e) {
