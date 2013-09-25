@@ -20,6 +20,7 @@ $(function() {
     });
 	
 	function login(e) {
+		$("article").css("margin-top", "0");
 		var unv = $("#txt_un").val(), pwv = $("#txt_pw").val();
 		if (unv === "" || pwv === "") sorry("请先输入帐号和密码！");
 		else {
