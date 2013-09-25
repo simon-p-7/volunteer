@@ -92,6 +92,10 @@ header[id='fixed'] div {
 	text-align: center;
 }
 
+header[id='fixed'] div img {
+	vertical-align: middle;
+}
+
 article {
 	float: left;
 	padding: 9em 2.5em 2em 2.5em;
