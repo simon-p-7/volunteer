@@ -26,6 +26,6 @@ section ul li div {
 	font-size: 2.2em;
 }
 
-section ul li div output {
+section ul li div output,section ul li div a {
 	font-size: 1em;
 }
