@@ -26,7 +26,6 @@ section ul li {
 	border-bottom: #2b2c2f solid 0.1em;
 	background-color: #222326;
 	width: 100%;
-	font-size: 2.2em;
 }
 
 section ul li span {
@@ -36,10 +35,12 @@ section ul li span {
 	width: 28%;
 	padding: 0.7em;
 	text-align: right;
+	font-size: 2.2em;
 }
 
 section ul li div {
 	border-left: #2b2c2f solid 0.1em;
 	display: inline-block;
 	padding: 0.7em 0.9em;
+	font-size: 2.2em;
 }
