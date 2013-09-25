@@ -25,6 +25,10 @@ section div span {
 	line-height: 1.5em;
 }
 
+section div span output {
+	font-size: 1em;
+}
+
 section div button {
 	width: 50%;
 	margin: 0;
