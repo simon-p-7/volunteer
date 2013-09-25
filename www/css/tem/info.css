@@ -4,7 +4,7 @@ article header {
 }
 
 article img[id='head'] {
-	-webkit-border-radius: 240px;
+	-webkit-border-radius: 15em;
 	-webkit-box-shadow:0 2px 5px #000;
 }
 
