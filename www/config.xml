@@ -2,28 +2,31 @@
 <widget id="vol.mobile" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>绍兴志愿者</name>
     <description>绍兴志愿者网站 http://www.sxvol.com</description>
-    <author email="simon.p.7@hotmail.com" href="http://simon7world.wordpress.com/">Simon P. Chang</author>
+    <author email="simon.p.7@outlook.com" href="http://simon7world.wordpress.com/">Simon P. Chang</author>
 	<!-- plugin -->
 	<gap:plugin name="com.phonegap.plugins.barcodescanner" />
     <!-- Permission -->
+	<feature name="http://api.phonegap.com/1.0/device" />
 	<feature name="http://api.phonegap.com/1.0/network" />
 	<feature name="http://api.phonegap.com/1.0/notification" />
-	<feature name="http://api.phonegap.com/1.0/device" />
 	<!-- Common -->
 	<preference name="phonegap-version" value="2.9.0" />
     <preference name="orientation" value="portrait" />
     <preference name="fullscreen" value="true" />
+	<preference name="target-device" value="universal" />
 	<!-- iOS -->
-	<preference name="target-device" value="handset" />
     <preference name="ios-statusbarstyle" value="black-opaque" />
     <preference name="detect-data-types" value="false" />
     <preference name="exit-on-suspend" value="true" />
+	<preference name="webviewbounce" value="true" />
+	<preference name="stay-in-webview" value="false" />
     <preference name="show-splash-screen-spinner" value="true" />
     <preference name="auto-hide-splash-screen" value="true" />
 	<!-- BlackBerry -->
     <preference name="disable-cursor" value="true" />
 	<!-- Android -->
     <preference name="android-minSdkVersion" value="8" />
+	<preference name="android-targetSdkVersion" value="14" />
     <preference name="android-installLocation" value="auto" />
 	<preference name="splash-screen-duration" value="4000" />
 	<!-- Icon -->
