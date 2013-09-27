@@ -25,7 +25,7 @@
 	<!-- BlackBerry -->
     <preference name="disable-cursor" value="true" />
 	<!-- Android -->
-    <preference name="android-minSdkVersion" value="8" />
+    <preference name="android-minSdkVersion" value="11" />
 	<preference name="android-targetSdkVersion" value="14" />
     <preference name="android-installLocation" value="auto" />
 	<preference name="splash-screen-duration" value="4000" />
