@@ -31,10 +31,10 @@ $(function() {
     });
 	
 	$("#commit").click(function(e) {
-		var uid = $("#uname").val();
-		if (uid === "") sorry("请先扫描志愿者！");
+		var unm = $("#uname").val();
+		if (unm === "") sorry("请先扫描志愿者！");
 		else {
-			ajaxGet(temService + "Recognized", { id: uid , pid: aid }, function(data) {
+			ajaxGet(temService + "Recognized", { un: unm , pid: aid }, function(data) {
 				var d = XML2JSON(data);
 				$("#head").attr("src", "../img/hd.png");
 				$("#name").val("");
