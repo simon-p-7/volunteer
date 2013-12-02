@@ -22,6 +22,7 @@ article div {
 	height: 32px;
 	background: url(../img/ro.png) no-repeat;
 	background-position: -32px 0;
+	background-size: 64px 32px;
 }
 
 .unchecked {

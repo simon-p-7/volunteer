@@ -49,7 +49,7 @@
     <gap:splash gap:platform="ios" height="1024" src="res/screen/ios/screen-ipad-portrait.png" width="768" />
     <gap:splash gap:platform="ios" height="768" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
 	<!-- Access -->
-    <access origin="http://192.168.30.16" />
+    <access origin="http://192.168.1.77" />
 	<!-- Build -->
 	<gap:platform name="ios" />
 	<gap:platform name="android" />

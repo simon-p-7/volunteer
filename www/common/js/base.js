@@ -1,4 +1,4 @@
-window.win = window, win.doc = win.document, win.sess = win.sessionStorage, win.host = "http://192.168.30.16:";
+window.win = window, win.doc = win.document, win.sess = win.sessionStorage, win.host = "http://192.168.1.77:";
 win.serviceHost = host + "12544/", win.volService = serviceHost + "VolunteerWebService.asmx/", win.temService = serviceHost + "TeamWebService.asmx/";
 win.fileHost = host + "12209/", win.skinPath = fileHost + "Skin/Images/", win.filePath = fileHost + "Upfiles/", win.teamPath = fileHost + "Module/FilesUp/UserIcon/";
 win.needAsk;
