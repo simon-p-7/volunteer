@@ -1,5 +1,5 @@
-needAsk = true;
-$(function() {	
+needAskLogout = true;
+$(function() {
 	ajaxGet(volService + "UserInfo", { id: getUser() }, function(data) {
 		var d = XML2JSON(data);
 		$("#uname").val(d[0]);

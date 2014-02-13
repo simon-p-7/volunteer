@@ -1,4 +1,4 @@
-needAsk = false;
+needAskLogout = false;
 $(function() {
 	var aid = getId(getItem("activity_id"));
 	ajaxGet(temService + "Project", { pid: aid }, function(data) {

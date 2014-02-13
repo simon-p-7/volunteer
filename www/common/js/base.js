@@ -1,11 +1,12 @@
 window.win = window, win.doc = win.document, win.sess = win.sessionStorage, win.host = "http://192.168.1.77:";
 win.serviceHost = host + "12544/", win.volService = serviceHost + "VolunteerWebService.asmx/", win.temService = serviceHost + "TeamWebService.asmx/";
 win.fileHost = host + "12209/", win.skinPath = fileHost + "Skin/Images/", win.filePath = fileHost + "Upfiles/", win.teamPath = fileHost + "Module/FilesUp/UserIcon/";
-win.needAsk;
+win.needAskExit, win.needAskLogout;
 doc.addEventListener("deviceready", function(e) {
 	navigator.notification && (win.nav = navigator, win.alert = nav.notification.alert, win.confirm = nav.notification.confirm, win.vibrate = nav.notification.vibrate);
 	nav.connection.type == Connection.NONE && sorry("网络连接不可用，请检查！", nav.app.exitApp);
-	needAsk === undefined || doc.addEventListener("backbutton", needAsk ? ask : goBack, false);
+	needAskLogout === undefined || doc.addEventListener("backbutton", needAskLogout ? logout : goBack, false);
+	needAskExit === undefined || doc.addEventListener("backbutton", needAskExit ? exit : goBack, false);
 }, false);
 
 win.redirect = function(h) {
@@ -40,13 +41,14 @@ win.sorry = function(msg, func) {
 	alert(msg, func, "对不起", "确 定");
 }
 
-win.ask = function() {
+win.exit = function() {
 	confirm("您真的要退出程序吗？", function(btn) { btn === 1 && nav.app.exitApp() }, "提 示", "是,否");
 }
 
 win.logout = function() {
-	sess.clear();
-	goBack();
+	confirm("您真的要注销用户吗？", function(btn) {
+		btn === 1 && (sess.clear(), goBack());
+	}, "提 示", "是,否");
 }
 
 win.getId = function(id, g) {

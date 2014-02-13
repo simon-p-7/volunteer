@@ -1,4 +1,4 @@
-needAsk = false;
+needAskLogout = false;
 $(function() {
 	var ul = $("article ul").html("");
 	ajaxGet(volService + "Apply", { id: getUser() }, function(data) {
