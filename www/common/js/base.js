@@ -1,6 +1,7 @@
-window.win = window, win.doc = win.document, win.sess = win.sessionStorage, win.host = "http://192.168.1.77:";
-win.serviceHost = host + "12544/", win.volService = serviceHost + "VolunteerWebService.asmx/", win.temService = serviceHost + "TeamWebService.asmx/";
-win.fileHost = host + "12209/", win.skinPath = fileHost + "Skin/Images/", win.filePath = fileHost + "Upfiles/", win.teamPath = fileHost + "Module/FilesUp/UserIcon/";
+window.win = window, win.doc = win.document, win.sess = win.sessionStorage;
+win.host = "http://192.168.1.77:", win.serviceHost = host + "12544/", win.fileHost = host + "12209/";
+win.volService = serviceHost + "VolunteerWebService.asmx/", win.temService = serviceHost + "TeamWebService.asmx/", win.nwsService = serviceHost + "NewsWebService.asmx", win.hlpService = serviceHost + "HelpWebService.asmx";
+win.skinPath = fileHost + "Skin/Images/", win.filePath = fileHost + "Upfiles/", win.teamPath = fileHost + "Module/FilesUp/UserIcon/";
 win.needAskExit, win.needAskLogout;
 doc.addEventListener("deviceready", function(e) {
 	navigator.notification && (win.nav = navigator, win.alert = nav.notification.alert, win.confirm = nav.notification.confirm, win.vibrate = nav.notification.vibrate);
