@@ -1,33 +1,33 @@
 needAskLogout = false;
 $(function() {
-	alert("here");
-	// $("section ul").keydown(function(e) {
-	// 	if (e.which === 13) {
-	// 		alert(e.target.id);
-	// 		switch (e.target.id) {
-	// 			case "txt_title":
-	// 				$("#txt_name").focus();
-	// 				break;
-	// 			case "txt_name":
-	// 				$("#txt_age").focus();
-	// 				break;
-	// 			case "txt_age":
-	// 				$("#txt_phone").focus();
-	// 				break;
-	// 			case "txt_phone":
-	// 				$("#txt_address").focus();
-	// 				break;
-	// 			case "txt_address":
-	// 				$("#txt_content").focus();
-	// 				break;
-	// 			case "txt_content":
-	// 				$("#commit").focus();
-	// 				break;
-	// 		}
-	// 	}
- //    });
+	$("section ul").keydown(function(e) {
+		alert(e.target);
+		// if (e.which === 13) {
+		// 	switch (e.target.id) {
+		// 		case "txt_title":
+		// 			$("#txt_name").focus();
+		// 			break;
+		// 		case "txt_name":
+		// 			$("#txt_age").focus();
+		// 			break;
+		// 		case "txt_age":
+		// 			$("#txt_phone").focus();
+		// 			break;
+		// 		case "txt_phone":
+		// 			$("#txt_address").focus();
+		// 			break;
+		// 		case "txt_address":
+		// 			$("#txt_content").focus();
+		// 			break;
+		// 		case "txt_content":
+		// 			$("#commit").focus();
+		// 			break;
+		// 	}
+		// }
+    });
 
-	// $("#commit").click(function(e) {
+	$("#commit").click(function(e) {
+		alert("here");
 	// 	var titlev = $("#txt_title").val();
 	// 	var namev = $("#txt_name").val();
 	// 	var agev = $("#txt_age").val();
@@ -42,5 +42,5 @@ $(function() {
 	// 			var d = XML2JSON(data);
 	// 			d === 0 ? sorry("提交失败！") ： good("提交成功！");
 	// 		});
-	// });
+	});
 })

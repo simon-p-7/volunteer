@@ -3,6 +3,7 @@ $(function() {
 	$("#tem").prop("checked", true);
 	
 	var savedUn = getlocalItem("user_name");
+	alert("" + savedUn);
 	savedUn && $("#txt_un").val(savedUn);
 
 	$("body").click(function(e) {
