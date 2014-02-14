@@ -1,4 +1,4 @@
-window.win = window, win.doc = win.document, win.sess = win.sessionStorage;
+window.win = window, win.doc = win.document, win.sess = win.sessionStorage, win.stag = win.localStorage;
 win.host = "http://192.168.1.77:", win.serviceHost = host + "12544/", win.fileHost = host + "12209/";
 win.volService = serviceHost + "VolunteerWebService.asmx/", win.temService = serviceHost + "TeamWebService.asmx/", win.nwsService = serviceHost + "NewsWebService.asmx", win.hlpService = serviceHost + "HelpWebService.asmx";
 win.skinPath = fileHost + "Skin/Images/", win.filePath = fileHost + "Upfiles/", win.teamPath = fileHost + "Module/FilesUp/UserIcon/";
@@ -23,7 +23,7 @@ win.goBack = function() {
 }
 
 win.getUser = function() {
-	return sess.getItem("user_id");
+	return stag.getItem("user_id");
 }
 
 win.getDir = function() {
@@ -36,6 +36,10 @@ win.setItem = function(k, v) {
 
 win.getItem = function(k) {
 	return sess.getItem(k);
+}
+
+win.setlocalItem = function(k, v) {
+	stag.setItem(k, v);
 }
 
 win.sorry = function(msg, func) {

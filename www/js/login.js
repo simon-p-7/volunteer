@@ -1,7 +1,10 @@
-needAskLogout = false;
+needAskExit = false;
 $(function() {
 	$("#tem").prop("checked", true);
 	
+	var uid = getUser();
+	uid && $("#txt_un").val(uid);
+
 	$("body").click(function(e) {
         $("article").css("margin-top", e.target.type === "text" || e.target.type === "password" ? "-16em" : "0");
     });
@@ -31,7 +34,7 @@ $(function() {
 				if (d === null) sorry("登录失败！");
 				else {
 					setItem("user_type", isTem ? "tem" : "vol");
-					setItem("user_id", d);
+					setlocalItem("user_id", d);
 					redirect(getDir() + "info.html");
 				}
 				$("#txt_pw").val("");

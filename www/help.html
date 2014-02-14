@@ -13,10 +13,19 @@
 </head>
 <body>
 	<header id="fixed">
-        
+        <div onClick="goBack()">&lt;</div><h1>求助信息</h1><div></div>
     </header>
-	<article>
-
-	</article>
+    <article></article>
+	<section>
+		<ul>
+        	<li><span>求助标题</span><div><input id="txt_title" type="text" placeholder="请用20字左右简洁说明"></div></li>
+            <li><span>姓名</span><div><input id="txt_name" type="text"></div></li>
+            <li><span>年龄</span><div><input id="txt_age" type="number"></div></li>
+            <li><span>电话</span><div><input id="txt_phone" type="tel"></div></li>
+            <li><span>地址</span><div><input id="txt_address" type="text"></div></li>
+            <li><span>求助详情</span><div><textarea id="txt_content" rows="4"></textarea></div></li>
+        </ul>
+        <button type="button" id="commit" class="main"><img src="img/ct.png" width="30" height="25">提 交</button>
+	</section>
 </body>
 </html>

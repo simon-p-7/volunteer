@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget id="vol.mobile" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="vasx-mobile" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>志愿绍兴</name>
     <description>志愿绍兴 http://www.vasx.org</description>
-    <author email="simon.p.7@outlook.com" href="http://simon7world.wordpress.com/">Simon P. Chang</author>
+    <author email="simon.p.7@outlook.com" href="http://simon7world.wordpress.com/">Simon Chang</author>
 	<!-- plugin -->
 	<gap:plugin name="com.phonegap.plugins.barcodescanner" />
     <!-- Permission -->
