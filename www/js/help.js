@@ -10,12 +10,11 @@ $(function() {
 
 		alert("here");
 
-		if (titlev === "" || namev === "" || agev === "" || phonev === "" || addressv === "" || contentv === "")
-			sorry("请您完善求助信息后再提交！");
-		else
-			ajaxGet(hlpService + "Help", { title: titlev, name: namev, age: agev, phone: phonev, address: addressv, content: contentv }, function(data) {
-				var d = XML2JSON(data);
-				d === 0 ? sorry("提交失败！") ： good("提交成功！");
-			});
+		(titlev === "" || namev === "" || agev === "" || phonev === "" || addressv === "" || contentv === "") ?
+		sorry("请您完善求助信息后再提交！") :
+		ajaxGet(hlpService + "Help", { title: titlev, name: namev, age: agev, phone: phonev, address: addressv, content: contentv }, function(data) {
+			var d = XML2JSON(data);
+			d === 0 ? sorry("提交失败！") ： good("提交成功！");
+		});
 	});
 })

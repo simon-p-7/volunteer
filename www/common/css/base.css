@@ -35,7 +35,7 @@ ul {
 	list-style: none;
 }
 
-textarea,input[type='text'],input[type='password'],input[type='number'],input[type='tel'] {
+textarea,input[type='text'],input[type='password'] {
 	border: 0;
 	-webkit-border-radius: 0.2em;
 	width: 100%;
