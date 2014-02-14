@@ -1,0 +1,26 @@
+article {
+	padding: 0;
+	padding-top: 7em;
+}
+
+article ul {
+	float: left;
+	background-color: #222326;
+	width: 100%;
+}
+
+article ul li {
+	float: left;
+	width: 100%;
+	padding: 1.7em 3em 1.7em 6em;
+	border-bottom: #1d1c1e solid 0.2em;
+	background: url(../../img/ht.png) no-repeat;
+	background-position: 2em 2.4em;
+	background-size: 31px 23px;
+    font-size: 2.2em;
+}
+
+article ul li span {
+	font-size: 0.7em;
+	color: #ccc;
+}

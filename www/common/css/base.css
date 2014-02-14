@@ -44,6 +44,7 @@ textarea,input[type='text'],input[type='password'] {
 	color: #1e1f21;
 	padding: 0.5em 0.7em;
 	margin: 0.3em 0;
+	resize: none;
 }
 
 label {

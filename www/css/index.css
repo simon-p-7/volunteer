@@ -2,3 +2,9 @@ header[id='fixed'] div {
 	font-size: 2.2em;
 	font-weight: normal;
 }
+
+article h2 {
+	float: left;
+	padding: 0.9em 0 0.4em 0;
+	width: 100%;
+}
