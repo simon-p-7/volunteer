@@ -27,7 +27,7 @@ win.getUser = function() {
 }
 
 win.getDir = function() {
-	return sess.getItem("user_type") + "/";
+	return stag.getItem("user_type") + "/";
 }
 
 win.setItem = function(k, v) {

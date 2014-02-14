@@ -1,9 +1,8 @@
 needAskLogout = false;
 $(function() {
-	$("#tem").prop("checked", true);
-	
-	var savedUn = getlocalItem("user_name");
-	savedUn && $("#txt_un").val(savedUn);
+	var savedName = getlocalItem("user_name"), savedType = getlocalItem("user_type");
+	$("#" + !savedType ? "tem" : savedType).prop("checked", true).change();
+	!savedName || $("#txt_un").val(savedName);
 	
 	$("body").click(function(e) {
         $("article").css("margin-top", e.target.type === "text" || e.target.type === "password" ? "-16em" : "0");
@@ -30,8 +29,8 @@ $(function() {
 				var d = XML2JSON(data);
 				if (d === null) sorry("登录失败！");
 				else {
-					setItem("user_type", isTem ? "tem" : "vol");
 					setItem("user_id", d);
+					setlocalItem("user_type", isTem ? "tem" : "vol");
 					setlocalItem("user_name", unv);
 					redirect(getDir() + "info.html");
 				}
