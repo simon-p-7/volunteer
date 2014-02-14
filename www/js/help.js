@@ -1,5 +1,6 @@
 needAskExit = false;
 $(function() {
+	alert("here");
 	$("section ul").keydown(function(e) {
 		if (e.which === 13) {
 			alert(e.target.id);
@@ -42,4 +43,4 @@ $(function() {
 				d === 0 ? sorry("提交失败！") ： good("提交成功！");
 			});
 	});
-});
+})

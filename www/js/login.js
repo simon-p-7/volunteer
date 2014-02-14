@@ -2,8 +2,8 @@ needAskExit = false;
 $(function() {
 	$("#tem").prop("checked", true);
 	
-	var uid = getUser();
-	uid && $("#txt_un").val(uid);
+	var savedUn = getlocalItem("user_name");
+	savedUn && $("#txt_un").val(savedUn);
 
 	$("body").click(function(e) {
         $("article").css("margin-top", e.target.type === "text" || e.target.type === "password" ? "-16em" : "0");
@@ -34,7 +34,8 @@ $(function() {
 				if (d === null) sorry("登录失败！");
 				else {
 					setItem("user_type", isTem ? "tem" : "vol");
-					setlocalItem("user_id", d);
+					setItem("user_id", d);
+					setlocalItem("user_name", unv);
 					redirect(getDir() + "info.html");
 				}
 				$("#txt_pw").val("");
