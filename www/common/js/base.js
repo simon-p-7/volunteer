@@ -42,6 +42,10 @@ win.setlocalItem = function(k, v) {
 	stag.setItem(k, v);
 }
 
+win.good = function(msg) {
+	alert(msg, null, "恭喜您", "确 定");
+}
+
 win.sorry = function(msg, func) {
 	alert(msg, func, "对不起", "确 定");
 }
@@ -58,6 +62,7 @@ win.logout = function() {
 
 win.getId = function(id, g) {
 	(g === undefined || g === null) && (g = 2);
+	
 	return id.substring(g, id.length);
 }
 
