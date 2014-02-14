@@ -6,9 +6,8 @@ win.needAskExit, win.needAskLogout;
 doc.addEventListener("deviceready", function(e) {
 	navigator.notification && (win.nav = navigator, win.alert = nav.notification.alert, win.confirm = nav.notification.confirm, win.vibrate = nav.notification.vibrate);
 	nav.connection.type == Connection.NONE && sorry("网络连接不可用，请检查！", nav.app.exitApp);
-	alert(needAskLogout + "    " + needAskExit);
 	needAskLogout === undefined || doc.addEventListener("backbutton", needAskLogout ? logout : goBack, false);
-	needAskExit === undefined || doc.addEventListener("backbutton", needAskExit ? appExit : goBack, false);
+	needAskExit === undefined || doc.addEventListener("backbutton", needAskExit ? appExit : nav.app.exitApp, false);
 }, false);
 
 win.redirect = function(h) {
@@ -44,7 +43,7 @@ win.setlocalItem = function(k, v) {
 }
 
 win.getlocalItem = function(k) {
-	stag.setItem(k);
+	stag.getItem(k);
 }
 
 win.good = function(msg) {

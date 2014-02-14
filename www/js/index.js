@@ -1,6 +1,5 @@
-needAskExit = true;
+needAskLogout = true;
 $(function() {
-
-alert("here");
-
+	alert(needAskLogout);
+	alert(needAskExit);
 })
