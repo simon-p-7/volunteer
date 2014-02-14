@@ -3,9 +3,26 @@ $(function() {
 	$("section ul").keydown(function(e) {
 		if (e.which === 13) {
 			alert(e.target.id);
-			//switch (e.target.id) {
-			//}
-			$("#txt_name").focus();
+			switch (e.target.id) {
+				case "txt_title":
+					$("#txt_name").focus();
+					break;
+				case "txt_name":
+					$("#txt_age").focus();
+					break;
+				case "txt_age":
+					$("#txt_phone").focus();
+					break;
+				case "txt_phone":
+					$("#txt_address").focus();
+					break;
+				case "txt_address":
+					$("#txt_content").focus();
+					break;
+				case "txt_content":
+					$("#commit").focus();
+					break;
+			}
 		}
     });
 
