@@ -1,5 +1,6 @@
 needAskLogout = false;
 $(function() {
+	alert("here");
 	// $("section ul").keydown(function(e) {
 	// 	if (e.which === 13) {
 	// 		alert(e.target.id);

@@ -1,4 +1,4 @@
-needAskLogout = true;
+needAskLogout = false;
 $(function() {
 	$("#tem").prop("checked", true);
 	
@@ -9,10 +9,7 @@ $(function() {
         $("article").css("margin-top", e.target.type === "text" || e.target.type === "password" ? "-16em" : "0");
     });
 	
-	$("#txt_un").keydown(function(e) {
-        e.which === 13 && $("#txt_pw").focus();
-    });
-	$("#txt_pw").keydown(function(e) {
+	$("#txt_un,#txt_pw").keydown(function(e) {
        e.which === 13 && login(e);
     });
 	$("#btn_li").click(login);
