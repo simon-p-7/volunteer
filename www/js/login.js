@@ -1,4 +1,4 @@
-needAskExit = false;
+needAskLogout = true;
 $(function() {
 	$("#tem").prop("checked", true);
 	
