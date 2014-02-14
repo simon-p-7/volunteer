@@ -3,9 +3,8 @@ $(function() {
 	$("#tem").prop("checked", true);
 	
 	var savedUn = getlocalItem("user_name");
-	alert("" + savedUn);
 	savedUn && $("#txt_un").val(savedUn);
-
+	
 	$("body").click(function(e) {
         $("article").css("margin-top", e.target.type === "text" || e.target.type === "password" ? "-16em" : "0");
     });

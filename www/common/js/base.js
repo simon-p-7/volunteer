@@ -43,7 +43,7 @@ win.setlocalItem = function(k, v) {
 }
 
 win.getlocalItem = function(k) {
-	stag.getItem(k);
+	return stag.getItem(k);
 }
 
 win.good = function(msg) {
