@@ -3,6 +3,11 @@ header[id='fixed'] div {
 	font-weight: normal;
 }
 
+header h1 img {
+	vertical-align: middle;
+	margin-right: 0.5em;
+}
+
 article h2 {
 	float: left;
 	padding: 1em 0 0.4em 0;
