@@ -7,7 +7,7 @@ $(function () {
         var phonev = $("#txt_phone").val();
         var addressv = $("#txt_address").val();
         var contentv = $("#txt_content").val();
-
+        
         (titlev === "" || namev === "" || agev === "" || phonev === "" || addressv === "" || contentv === "") ?
         sorry("请您完善求助信息后再提交！") :
         ajaxGet(hlpService + "Help", { title: titlev, name: namev, age: agev, phone: phonev, address: addressv, content: contentv }, function(data) {

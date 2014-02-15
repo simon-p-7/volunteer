@@ -1,7 +1,7 @@
 needAskLogout = false;
 $(function() {
 	var savedName = getlocalItem("user_name"), savedType = getlocalItem("user_type");
-	var sl = $("#" + !savedType ? "tem" : savedType).prop("checked", true).next().removeClass("unchecked").addClass("checked");
+	$("#" + !savedType ? "tem" : savedType).prop("checked", true).next().removeClass("unchecked").addClass("checked");
 	!savedName || $("#txt_un").val(savedName);
 	
 	$("body").click(function(e) {
