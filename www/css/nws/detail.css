@@ -1,7 +1,11 @@
 p {
 	width: 100%;
-	font-size: 2.1em;
-	padding: 0 1.2em 1.2em 1.2em;
+	font-size: 1.5em;
+	padding: 0 0.5em 0.5em 0.5em;
+}
+
+p * {
+	font-size: 1em;
 }
 
 p img {
