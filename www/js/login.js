@@ -1,9 +1,11 @@
 needAskLogout = false;
 $(function() {
 	var savedName = getlocalItem("user_name"), savedType = getlocalItem("user_type");
+	alert(stag);
 	$("#" + !savedType ? "tem" : savedType).prop("checked", true).next().removeClass("unchecked").addClass("checked");
 	!savedName || $("#txt_un").val(savedName);
-	
+
+	/*
 	$("body").click(function(e) {
         $("article").css("margin-top", e.target.type === "text" || e.target.type === "password" ? "-16em" : "0");
     });
@@ -37,5 +39,5 @@ $(function() {
 				$("#txt_pw").val("");
 			}, true);
 		}
-	}
+	}*/
 })
