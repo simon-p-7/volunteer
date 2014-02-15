@@ -1,19 +1,19 @@
 needAskLogout = false;
 $(function() {
-	$("#vol,#tem").change(function(e) {
-        $(e.target).next().removeClass("unchecked").addClass("checked");
-		$("#" + (e.target.id == "vol" ? "tem" : "vol")).next().removeClass("checked").addClass("unchecked");
-    	$("#txt_pw,#txt_un").val("");
-	});
-	
 	var savedName = getlocalItem("user_name"), savedType = getlocalItem("user_type");
-	$("#" + !savedType ? "tem" : savedType).prop("checked", true).change();
+	var sl = $("#" + !savedType ? "tem" : savedType).prop("checked", true).next().removeClass("unchecked").addClass("checked");
 	!savedName || $("#txt_un").val(savedName);
 	
 	$("body").click(function(e) {
         $("article").css("margin-top", e.target.type === "text" || e.target.type === "password" ? "-16em" : "0");
     });
 	
+	$("#vol,#tem").change(function(e) {
+        $(e.target).next().removeClass("unchecked").addClass("checked");
+		$("#" + (e.target.id == "vol" ? "tem" : "vol")).next().removeClass("checked").addClass("unchecked");
+    	$("#txt_pw,#txt_un").val("");
+	});
+
 	$("#txt_un,#txt_pw").keydown(function(e) {
        e.which === 13 && login(e);
     });

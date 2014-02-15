@@ -4,13 +4,13 @@ $(function() {
     ajaxGet(nwsService + "NewsTop", { top: 4 }, function(data) {
         var d = XML2JSON(data);
         for (var i = 0, arr; arr = d[i++];) {
-            uls.eq(0).append("<li id='n_" + arr[0] + "'>" + arr[1] + "<br><span>" + arr[2] + "</span></li>");
+            uls.eq(0).append("<li id='n_" + arr[0] + "'><span>" + arr[1] + "<br><span>" + arr[2] + "</span><span>&nbsp;</span></span></li>");
         }
     });
     ajaxGet(nwsService + "LaunchTop", { top: 4 }, function(data) {
         var d = XML2JSON(data);
         for (var i = 0, arr; arr = d[i++];) {
-            uls.eq(1).append("<li id='a_" + arr[0] + "'>" + arr[1] + "<br><span>" + arr[2] + "</span></li>");
+            uls.eq(1).append("<li id='a_" + arr[0] + "'><span>" + arr[1] + "<br><span>" + arr[2] + "</span><span>&nbsp;</span></span></li>");
         }
     });
 
