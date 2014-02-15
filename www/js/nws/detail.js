@@ -5,6 +5,6 @@ $(function() {
         $("#title").html(d[0]);
         $("#source").val(d[1]);
         $("#time").val(d[2]);
-        $("section").html(d[3]);
+        $("p").html(d[3]);
     });
 })
