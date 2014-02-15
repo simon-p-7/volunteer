@@ -1,5 +1,11 @@
 needAskLogout = false;
 $(function() {
+	$("#vol,#tem").change(function(e) {
+        $(e.target).next().removeClass("unchecked").addClass("checked");
+		$("#" + (e.target.id == "vol" ? "tem" : "vol")).next().removeClass("checked").addClass("unchecked");
+    	$("#txt_pw,#txt_un").val("");
+	});
+	
 	var savedName = getlocalItem("user_name"), savedType = getlocalItem("user_type");
 	$("#" + !savedType ? "tem" : savedType).prop("checked", true).change();
 	!savedName || $("#txt_un").val(savedName);
@@ -12,12 +18,6 @@ $(function() {
        e.which === 13 && login(e);
     });
 	$("#btn_li").click(login);
-	
-	$("#vol,#tem").change(function(e) {
-        $(e.target).next().removeClass("unchecked").addClass("checked");
-		$("#" + (e.target.id == "vol" ? "tem" : "vol")).next().removeClass("checked").addClass("unchecked");
-    	$("#txt_pw,#txt_un").val("");
-	});
 	
 	function login(e) {
 		$("article").css("margin-top", "0");

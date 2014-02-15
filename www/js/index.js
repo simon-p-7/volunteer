@@ -1,16 +1,16 @@
 needAskExit = true;
 $(function() {
-    //var uls = $("article ul").html("");
-    ajaxGet(nwsService + "ListTop", { top: 3 }, function(data) {
+    var uls = $("article ul").html("");
+    ajaxGet(nwsService + "NewsTop", { top: 4 }, function(data) {
         var d = XML2JSON(data);
         for (var i = 0, arr; arr = d[i++];) {
             uls.eq(0).append("<li id='n_" + arr[0] + "'>" + arr[1] + "<br><span>" + arr[2] + "</span></li>");
         }
     });
-    ajaxGet(hlpService + "ListTop", { top: 3 }, function(data) {
+    ajaxGet(nwsService + "LaunchTop", { top: 4 }, function(data) {
         var d = XML2JSON(data);
         for (var i = 0, arr; arr = d[i++];) {
-            uls.eq(1).append("<li id='h_" + arr[0] + "'>" + arr[1] + "<br><span>" + arr[2] + "</span></li>");
+            uls.eq(1).append("<li id='a_" + arr[0] + "'>" + arr[1] + "<br><span>" + arr[2] + "</span></li>");
         }
     });
 
@@ -20,7 +20,13 @@ $(function() {
             while (tag.parentNode.nodeName.toUpperCase() !== "LI") tag = tag.parentNode;
             tag = tag.parentNode;
         }
-        setItem("nh_id", tag.id);
-        redirect("detail.html");
+        if (tag.id[0] === 'a') {
+            setItem("activity_id", tag.id);
+            setItem("activity_had", false);
+            redirect("../vol/activity.html");
+        } else {
+            setItem("news_id", tag.id);
+            redirect("detail.html");
+        }
     });
 })
