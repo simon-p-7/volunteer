@@ -23,7 +23,9 @@ win.goBack = function() {
 }
 
 win.getUser = function() {
-	return sess.getItem("user_id");
+	var u = sess.getItem("user_id");
+
+	return !u ? -1 : u;
 }
 
 win.getDir = function() {
