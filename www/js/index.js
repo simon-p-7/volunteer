@@ -23,10 +23,22 @@ $(function() {
         if (tag.id[0] === 'a') {
             setItem("activity_id", tag.id);
             setItem("activity_had", false);
-            redirect("../vol/activity.html");
+            redirect("vol/activity.html");
         } else {
             setItem("news_id", tag.id);
-            redirect("detail.html");
+            redirect("nws/detail.html");
         }
+    });
+
+    $("header div").each(function(i) {
+        $(this).click(function(e) {
+            redirect(i === 0 ? "help.html" : "login.html");
+        });
+    });
+
+    $("article h2").each(function(i) {
+        $(this).click(function(e) {
+            redirect(i === 0 ? "nws/list.html" : "vol/launch-activity.html");
+        });
     });
 })

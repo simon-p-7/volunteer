@@ -1,10 +1,10 @@
 needAskLogout = false;
 $(function() {
     var ul = $("article ul").html("");
-    ajaxGet(nwsService + "List", null, function(data) {
+    ajaxGet(nwsService + "News", null, function(data) {
         var d = XML2JSON(data);
         for (var i = 0, arr; arr = d[i++];) {
-            ul.append("<li id='n_" + arr[0] + "'>" + arr[1] + "<br><span>" + arr[2] + "</span></li>");
+            ul.append("<li id='n_" + arr[0] + "'><span>" + arr[1] + "<br><span>" + arr[2] + "</span><span>&nbsp;</span></span></li>");
         }
     });
 
@@ -14,7 +14,7 @@ $(function() {
             while (tag.parentNode.nodeName.toUpperCase() !== "LI") tag = tag.parentNode;
             tag = tag.parentNode;
         }
-        setItem("nh_id", tag.id);
+        setItem("news_id", tag.id);
         redirect("detail.html");
     });
 })
