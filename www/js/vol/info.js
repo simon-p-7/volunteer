@@ -11,11 +11,9 @@ $(function() {
 		$("#unit").val(d[6]);
 		$("#type").val(d[7]);
 		$("#email").val(d[8]);
-		$("#free").val(d[9]);
-		$("#exp").val(d[10]);
-		$("#head").attr("src", skinPath + d[11]);
-		$("#hour").val(d[12]);
-		$("#star").val(d[13]);
+		$("#head").attr("src", skinPath + d[9]);
+		$("#hour").val(d[10]);
+		$("#star").val(d[11]);
 	});
 	
 	$("button,nav ul li").click(function(e) {

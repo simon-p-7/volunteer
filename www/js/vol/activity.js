@@ -39,7 +39,7 @@ $(function() {
     });
 
 	$("body").click(function(e) {
-        $("#commit").css("margin-bottom", e.target.type === "textarea" ? "10em" : "0");
+        $("#commit").css("margin-bottom", e.target.type === "textarea" ? "10em" : "1em");
     });
 
     $("#commit").click(function(e) {
