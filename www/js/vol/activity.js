@@ -39,8 +39,9 @@ $(function() {
     });
 
 	$("body").click(function(e) {
-        $("#commit").css("margin-bottom", e.target.type === "textarea" ? "13em" : "1em");
-        this.scrollTop = 9999999;
+		var needUp = e.target.type === "textarea";
+        $("#commit").css("margin-bottom", needUp ? "14em" : "1em");
+        needUp && this.scrollTop = 9999999;
     });
 
     $("#commit").click(function(e) {
