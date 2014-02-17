@@ -3,7 +3,7 @@ $(function() {
 	var aid = getId(getItem("activity_id"));
 	ajaxGet(volService + "Activity", { id: getUser(), pid: aid, had: getItem("activity_had") }, function(data) {
 		var d = XML2JSON(data);
-		d[19] === "0" && $("#join").remove();
+		d[19] === "0" && $("#join,#comment").remove();
 		$("#team").val(d[0]);
 		$("#squad").val(d[1]);
 		$("#type").val(d[2]);
