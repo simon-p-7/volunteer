@@ -32,3 +32,11 @@ article div {
 .gap {
 	padding-left: 0.5em;
 }
+
+footer {
+	width: 100%;
+	position: fixed;
+	bottom: 1em;
+	text-align: center;
+	font-size: 2em;
+}
