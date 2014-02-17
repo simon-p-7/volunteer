@@ -57,15 +57,14 @@ section ul li div output,section ul li div a {
 	float: right;
 }
 
-#comment textarea {
+#comment textarea,#comment button {
 	width: 93%;
-	margin: 1em 1.1em;
+	display: block;
+	margin: 1em auto;
 }
 
 #comment button {
-	width: 93%;
-	display: block;
-	margin: 0 auto 1em auto;
+	margin-top: 0;
 }
 
 #comment button img {

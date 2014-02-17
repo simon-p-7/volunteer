@@ -39,7 +39,7 @@ $(function() {
     });
 
 	$("body").click(function(e) {
-        $("#commit").css("margin-bottom", e.target.type === "textarea" ? "15em" : "1em");
+        $("#commit").css("margin-bottom", e.target.type === "textarea" ? "13em" : "1em");
         this.scrollTop = 9999999;
     });
 
