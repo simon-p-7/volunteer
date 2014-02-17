@@ -39,11 +39,12 @@ $(function() {
     });
 
 	$("body").click(function(e) {
-        $("#commit").css("margin-bottom", e.target.type === "textarea" ? "10em" : "1em");
+        $("#commit").css("margin-bottom", e.target.type === "textarea" ? "15em" : "1em");
+        this.scrollTop = 9999999;
     });
 
     $("#commit").click(function(e) {
-    	var time = new Date(), obj = $(this), area = obj.find("textarea");
+    	var time = new Date(), obj = $("#comment"), area = obj.find("textarea");
     	time = time.getFullYear() + "-" + (time.getMonth() + 1) + "-" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes();
     	obj.find("ul").append("<li><div>李四<span>" + time + "</span></div><br>" + area.val() + "</li>");
     	area.val("");
