@@ -20,7 +20,7 @@ article ul li {
 article h2 {
 	float: left;
 	font-size: 3em;
-	padding: 1em 0 0.4em 0;
+	padding: 0.5em 0 0.05em 0;
 	width: 100%;
 	color: #00BFFF;
 }
