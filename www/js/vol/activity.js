@@ -37,4 +37,10 @@ $(function() {
 			}
 		});
     });
+
+    $("#comment").click(function(e) {
+    	var time = new Date(), obj = $(this);
+    	time = time.getFullYear() + "-" + (time.getMonth() + 1) + "-" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes();
+    	obj.find("ul").append("<li><div>李四<span>" + time + "</span></div><br>" + obj.find("textarea").val() + "</li>");
+    });
 })
