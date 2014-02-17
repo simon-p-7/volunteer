@@ -22,7 +22,6 @@ $(function() {
 								$("#head").attr("src", skinPath + d[3]);
 								$("#name").val(p[0]);
 								$("#uname").val(p[1]);
-								$("#id").val(p[2]);
 							} else sorry("该志愿者不存在！")
 						}, true);
 					} else sorry("您扫描的不是二维码！");
