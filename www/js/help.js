@@ -8,11 +8,12 @@ $(function () {
         var addressv = $("#txt_address").val();
         var contentv = $("#txt_content").val();
         
-        (titlev === "" || namev === "" || agev === "" || phonev === "" || addressv === "" || contentv === "") ?
-        sorry("请您完善求助信息后再提交！") :
-        ajaxGet(hlpService + "Help", { title: titlev, name: namev, age: agev, phone: phonev, address: addressv, content: contentv }, function(data) {
+        if (titlev === "" || namev === "" || agev === "" || phonev === "" || addressv === "" || contentv === "") sorry("请完善信息后提交！");
+        else if (/^\d+$/i.test(agev)) sorry("年龄只能输入数字！");
+        else if (/^\d+$/i.test(phonev)) sorry("电话只能输入数字！");
+        else ajaxGet(hlpService + "Help", { title: titlev, name: namev, age: agev, phone: phonev, address: addressv, content: contentv }, function(data) {
         	var d = XML2JSON(data);
-        	d === 0 ? sorry("提交失败！") : good("提交成功！");
+        	d === 0 ? sorry("提交信息失败！") : (good("提交信息成功！"), goBack());
         });
     });
 })
