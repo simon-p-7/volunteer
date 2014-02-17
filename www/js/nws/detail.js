@@ -7,7 +7,9 @@ $(function() {
         $("#time").val(d[2]);
         $("section").html(d[3]);
 
-        $("section img[src^='../']").each(function(i){
+        $("section img[src^='../']").each(function(i) {
+            alert(this.src);
+            alert(fileHost + this.src.replace("../", ""));
         	this.src = fileHost + this.src.replace("../", "");
         });
     });
