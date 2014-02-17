@@ -6,5 +6,9 @@ $(function() {
         $("#source").val(d[1]);
         $("#time").val(d[2]);
         $("section").html(d[3]);
+
+        $("section img[src^='../']").each(function(i){
+        	this.src = fileHost + this.src.replace("../", "");
+        });
     });
 })

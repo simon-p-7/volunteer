@@ -7,7 +7,7 @@ $(function() {
 		$("#asso").val(d[2]);
 		$("#team").val(d[3]);
 		$("#squad").val(d[4]);
-		$("#head").attr("src", teamPath + d[5]);
+		$("#head").attr("src", skinPath + d[5]);
 	});
 	
 	$("#activities").click(function(e) {
