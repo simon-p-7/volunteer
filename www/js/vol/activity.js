@@ -46,7 +46,7 @@ $(function() {
     $("#commit").click(function(e) {
     	var time = new Date(), obj = $("#comment"), area = obj.find("textarea");
     	time = time.getFullYear() + "-" + (time.getMonth() + 1) + "-" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes();
-    	obj.find("ul").append("<li><div>李四<span>" + time + "</span></div><br>" + area.val() + "</li>");
+    	obj.find("ul").append("<li><div><span>" + time + "</span></div><br>" + area.val() + "</li>");
     	area.val("");
     });
 })
