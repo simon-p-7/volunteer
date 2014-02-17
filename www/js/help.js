@@ -9,8 +9,8 @@ $(function () {
         var contentv = $("#txt_content").val();
         
         if (titlev === "" || namev === "" || agev === "" || phonev === "" || addressv === "" || contentv === "") sorry("请完善信息后提交！");
-        else if (!/^\d+$/i.test(agev)) sorry("年龄只能输入数字！"), $("#txt_age").focus().select();
-        else if (!/^\d+$/i.test(phonev)) sorry("电话只能输入数字！"), $("#txt_age").focus().select();
+        else if (!/^\d+$/i.test(agev)) sorry("年龄只能输入数字！"), $("#txt_age").focus();
+        else if (!/^\d+$/i.test(phonev)) sorry("电话只能输入数字！"), $("#txt_phone").focus();
         else ajaxGet(hlpService + "Help", { title: titlev, name: namev, age: agev, phone: phonev, address: addressv, content: contentv }, function(data) {
         	var d = XML2JSON(data);
         	d === 0 ? sorry("提交信息失败！") : (good("提交信息成功！"), goBack());
