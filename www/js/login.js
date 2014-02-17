@@ -2,13 +2,14 @@ needAskLogout = false;
 $(function() {
 	$("#vol,#tem").change(function(e) {
         $(e.target).next().removeClass("unchecked").addClass("checked");
-		$("#" + (e.target.id == "vol" ? "tem" : "vol")).next().removeClass("checked").addClass("unchecked");
-    	$("#txt_pw,#txt_un").val("");
+		var type = e.target.id;
+		$("#" + (type === "vol" ? "tem" : "vol")).next().removeClass("checked").addClass("unchecked");
+    	$("#txt_pw").val("");
+    	$("#txt_un").val(getlocalItem("user_type") === type ? getlocalItem("user_name") : "");
 	});
 
-	var savedName = getlocalItem("user_name"), savedType = getlocalItem("user_type");
+	var savedType = getlocalItem("user_type");
 	$("#" + (!savedType ? "tem" : savedType)).prop("checked", true).change();
-	!savedName || $("#txt_un").val(savedName);
 
 	$("body").click(function(e) {
         $("article").css("margin-top", e.target.type === "text" || e.target.type === "password" ? "-16em" : "0");
