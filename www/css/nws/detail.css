@@ -11,4 +11,7 @@ section * {
 
 section img {
 	max-width: 100%;
+	display: block;
+    clear: both;
+    margin: 0 auto;
 }
