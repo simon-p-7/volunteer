@@ -22,7 +22,7 @@ $(function() {
         }
         if (tag.id[0] === 'a') {
             setItem("activity_id", tag.id);
-            setItem("activity_had", false);
+            setItem("activity_had", true);
             redirect("vol/activity.html");
         } else {
             setItem("news_id", tag.id);
