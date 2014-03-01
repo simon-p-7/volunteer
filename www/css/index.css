@@ -9,7 +9,7 @@ section article {
 }
 
 section article h2 {
-    padding-left: 2em;
+    padding-left: 1.7em;
     text-align: left;
 	width: 100%;
 	background: url(../img/ht.png) no-repeat;
@@ -50,8 +50,17 @@ section article ul[id='activity_list'] li nobr:nth-child(2) {
     width: 25%;
 }
 
-section article ul[id='group_list'] li {
-    background-color: #000;
+section article ul[name='group_list'] li {
+	padding: 1em 2em;
+	float: left;
+	width: 50%;
+	height: 5.5em;
+	overflow: hidden;
+	font-size: 2em;
+	text-align: center;
+	background: url(../img/hht.png) no-repeat;
+	background-position: center center;
+	background-size: 119px 67px;
 }
 
 nav {

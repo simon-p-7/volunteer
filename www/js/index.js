@@ -1,6 +1,6 @@
 needAskExit = true;
 $(function() {
-    var uls = $("section article ul").html("");
+    var uls = $("section article ul[id]").html("");
     ajaxGet(nwsService + "NewsTop", null, function(data) {
         var d = XML2JSON(data);
         for (var i = 0, arr; arr = d[i++];) {
@@ -10,7 +10,7 @@ $(function() {
     ajaxGet(nwsService + "LaunchTop", null, function(data) {
         var d = XML2JSON(data);
         for (var i = 0, arr; arr = d[i++];) {
-            uls.eq(1).append("<li id='a_" + arr[0] + "'><nobr>" + arr[1] + "</nobr><nobr>À˛…ΩΩ÷µ¿</nobr><span>[" + arr[2] + "]</span></li>");
+            uls.eq(1).append("<li id='a_" + arr[0] + "'><nobr>" + arr[1] + "</nobr><nobr>Â°îÂ±±Ë°óÈÅì</nobr><span>[" + arr[2] + "]</span></li>");
         }
     });
 
