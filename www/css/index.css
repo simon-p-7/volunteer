@@ -1,5 +1,5 @@
 section {
-    margin: 6.7em 0 11em 0;
+    padding: 6.7em 0 11em 0;
 }
 
 section article {
@@ -40,6 +40,8 @@ section article ul[id] li span {
     text-align: right;
     color: #ccc;
 }
+
+
 
 section article ul[name] li {
 	padding: 0;
