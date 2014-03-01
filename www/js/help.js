@@ -15,5 +15,20 @@ $(function () {
         	var d = XML2JSON(data);
         	d === 0 ? sorry("提交信息失败！") : (good("提交信息成功！"), goBack());
         });
-    });
+ });
+
+ $("nav ul").click(function(e) {
+     var tag = e.target;
+     if (tag.nodeName.toUpperCase() !== "LI") {
+         while (tag.parentNode.nodeName.toUpperCase() !== "LI") tag = tag.parentNode;
+         tag = tag.parentNode;
+     }
+     switch (tag.id) {
+         case "home": redirect("index.html"); break;
+         case "news": redirect("nws/list.html"); break;
+         case "activity": redirect("vol/launch-activity.html"); break;
+         case "help": redirect("help.html"); break;
+         case "login": redirect("login.html"); break;
+     }
+ });
 })

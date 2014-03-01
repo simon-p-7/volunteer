@@ -18,8 +18,10 @@ $(function() {
 	$("#txt_un,#txt_pw").keydown(function(e) {
        e.which === 13 && login(e);
     });
-	$("#btn_li").click(login);
 	
+    $("#btn_li").click(login);
+    $("#btn_bk").click(goBack);
+
 	function login(e) {
 		$("article").css("margin-top", "0");
 		var unv = $("#txt_un").val(), pwv = $("#txt_pw").val();
