@@ -1,7 +1,10 @@
 needAskLogout = false;
 $(function() {
-	var aid = getId(getItem("activity_id"));
-	ajaxGet(volService + "Activity", { id: getUser(), pid: aid, had: getItem("activity_had") }, function(data) {
+    var uid = getUser();
+    uid === -1 ? $("section").css("padding-bottom", "11em") : $("nav").remove();
+
+    var aid = getId(getItem("activity_id"));
+	ajaxGet(volService + "Activity", { id: uid, pid: aid, had: getItem("activity_had") }, function(data) {
 		var d = XML2JSON(data);
 		d[19] === "0" && $("#join,#comment").remove();
 		$("#team").val(d[0]);
@@ -48,5 +51,20 @@ $(function() {
     	time = time.getFullYear() + "-" + (time.getMonth() + 1) + "-" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes();
     	obj.find("ul").append("<li><div><span>" + time + "</span></div><br>" + area.val() + "</li>");
     	area.val("");
+    });
+
+    $("nav ul").click(function(e) {
+        var tag = e.target;
+        if (tag.nodeName.toUpperCase() !== "LI") {
+            while (tag.parentNode.nodeName.toUpperCase() !== "LI") tag = tag.parentNode;
+            tag = tag.parentNode;
+        }
+        switch (tag.id) {
+            case "home": redirect("../index.html"); break;
+            case "news": redirect("../nws/list.html"); break;
+            case "activity": redirect("launch-activity.html"); break;
+            case "help": redirect("../help.html"); break;
+            case "login": redirect("../login.html"); break;
+        }
     });
 })
