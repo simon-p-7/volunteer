@@ -1,7 +1,7 @@
 needAskLogout = false;
 $(function() {
     var uid = getUser();
-    uid === -1 ? $("section").last().css("padding-bottom", "11em") : $("nav").remove();
+    uid === -1 ? $("section").css("padding-bottom", "11em") : $("nav").remove();
 
     var aid = getId(getItem("activity_id"));
 	ajaxGet(volService + "Activity", { id: uid, pid: aid, had: getItem("activity_had") }, function(data) {
