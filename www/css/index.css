@@ -30,27 +30,18 @@ section article ul li span,section article ul li nobr {
 	overflow: hidden;
 }
 
-section article ul[id='news_list'] li nobr {
+section article ul[id] li nobr {
     width: 70%;
 }
 
-section article ul[id='news_list'] li span,section article ul[id='activity_list'] li span {
+section article ul[id] li span {
     width: 30%;
     font-size: 1.8em;
     text-align: right;
     color: #ccc;
 }
 
-section article ul[id='activity_list'] li nobr:nth-child(1) {
-    width: 45%;
-    padding-right: 1em;
-}
-
-section article ul[id='activity_list'] li nobr:nth-child(2) {
-    width: 25%;
-}
-
-section article ul[name='group_list'] li {
+section article ul[name] li {
 	padding: 0;
 	margin: 0.5em 1.5em;
 	float: left;

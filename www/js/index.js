@@ -10,7 +10,7 @@ $(function() {
     ajaxGet(nwsService + "LaunchTop", null, function(data) {
         var d = XML2JSON(data);
         for (var i = 0, arr; arr = d[i++];) {
-            uls.eq(1).append("<li id='a_" + arr[0] + "'><nobr>" + arr[1] + "</nobr><nobr>塔山街道</nobr><span>[" + arr[2] + "]</span></li>");
+            uls.eq(1).append("<li id='a_" + arr[0] + "'><nobr>" + arr[1] + "</nobr><span>[" + arr[2] + "]</span></li>");
         }
     });
 
