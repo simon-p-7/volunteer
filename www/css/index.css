@@ -52,7 +52,7 @@ section article ul[id='activity_list'] li nobr:nth-child(2) {
 
 section article ul[name='group_list'] li {
 	padding: 0;
-	margin: 1em 2em;
+	margin: 0.5em 1.5em;
 	float: left;
 	width: 30%;
 	height: 2.3em;
