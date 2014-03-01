@@ -1,16 +1,16 @@
 needAskExit = true;
 $(function() {
-    var uls = $("article ul").html("");
+    var uls = $("section article ul").html("");
     ajaxGet(nwsService + "NewsTop", null, function(data) {
         var d = XML2JSON(data);
         for (var i = 0, arr; arr = d[i++];) {
-            uls.eq(0).append("<li id='n_" + arr[0] + "'><span>" + arr[1] + "<br><span>" + arr[2] + "</span><span>&nbsp;</span></span></li>");
+            uls.eq(0).append("<li id='n_" + arr[0] + "'><nobr>" + arr[1] + "</nobr><span>[" + arr[2] + "]</span></li>");
         }
     });
     ajaxGet(nwsService + "LaunchTop", null, function(data) {
         var d = XML2JSON(data);
         for (var i = 0, arr; arr = d[i++];) {
-            uls.eq(1).append("<li id='a_" + arr[0] + "'><span>" + arr[1] + "<br><span>" + arr[2] + "</span><span>&nbsp;</span></span></li>");
+            uls.eq(1).append("<li id='a_" + arr[0] + "'><nobr>" + arr[1] + "</nobr><nobr>ËþÉ½½ÖµÀ</nobr><span>[" + arr[2] + "]</span></li>");
         }
     });
 
@@ -30,15 +30,18 @@ $(function() {
         }
     });
 
-    $("header div").each(function(i) {
-        $(this).click(function(e) {
-            redirect(i === 0 ? "help.html" : "login.html");
-        });
-    });
-
-    $("article h2").each(function(i) {
-        $(this).click(function(e) {
-            redirect(i === 0 ? "nws/list.html" : "vol/launch-activity.html");
-        });
+    $("nav ul").click(function(e) {
+        var tag = e.target;
+        if (tag.nodeName.toUpperCase() !== "LI") {
+            while (tag.parentNode.nodeName.toUpperCase() !== "LI") tag = tag.parentNode;
+            tag = tag.parentNode;
+        }
+        switch (tag.id) {
+            case "home": redirect("index.html"); break;
+            case "news": redirect("nws/list.html"); break;
+            case "activity": redirect("vol/launch-activity.html"); break;
+            case "help": redirect("help.html"); break;
+            case "login": redirect("login.html"); break;
+        }
     });
 })

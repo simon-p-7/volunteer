@@ -1,17 +1,57 @@
-article ul li {
-	padding: 0.8em 3em 0.4em 6em;
+section {
+    margin: 7em 0 11em 0;
 }
 
-article h2 {
-	float: left;
-	font-size: 3em;
-	padding: 0.3em 0 0.05em 0;
+section article {
+    margin-bottom: 0.8em;
+    padding: 1em 2.5em;
+    background-color: #222326;
+}
+
+section article h2 {
+    padding-left: 2em;
+    text-align: left;
 	width: 100%;
-	color: #00BFFF;
+	background: url(../img/ht.png) no-repeat;
+	background-position: 0 0.3em;
+	background-size: 31px 23px;
 }
 
-article h2 span {
-	font-size: 0.7em;
+section article ul li {
+	padding: 0.7em 1em;
+}
+
+section article ul li span,section article ul li nobr {
+    display: inline-block;
+    font-size: 2em;
+    height: 1em;
+    line-height: 1em;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+section article ul[id='news_list'] li nobr {
+    width: 70%;
+}
+
+section article ul[id='news_list'] li span,section article ul[id='activity_list'] li span {
+    width: 30%;
+    font-size: 1.8em;
+    text-align: right;
+    color: #ccc;
+}
+
+section article ul[id='activity_list'] li nobr:nth-child(1) {
+    width: 45%;
+    padding-right: 1em;
+}
+
+section article ul[id='activity_list'] li nobr:nth-child(2) {
+    width: 25%;
+}
+
+section article ul[id='group_list'] li {
+    background-color: #000;
 }
 
 nav {
@@ -30,5 +70,15 @@ nav ul li {
 	padding: 0.9em 0;
 }
 
-nav ul li img {
+nav ul li {
+    border-left: #2b2c2f solid 0.06em;
+    border-right: #2b2c2f solid 0.06em;
+}
+
+nav ul li:first-child {
+	border-left: 0;
+}
+
+nav ul li:last-child {
+	border-right: 0;
 }
