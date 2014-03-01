@@ -1,9 +1,9 @@
 section {
-    margin: 7em 0 11em 0;
+    margin: 6.8em 0 11em 0;
 }
 
 section article {
-    margin-bottom: 0.8em;
+    margin-bottom: 0.7em;
     padding: 1em 2.5em;
     background-color: #222326;
 }
@@ -54,7 +54,7 @@ section article ul[name='group_list'] li {
 	padding: 0;
 	margin: 0.5em 1.5em;
 	float: left;
-	width: 37%;
+	width: 36%;
 	height: 2.3em;
 	overflow: hidden;
 	font-size: 2em;
