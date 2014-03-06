@@ -19,7 +19,7 @@ $(function() {
 						ajaxGet(temService + "Check", { un: p[1] }, function(data) {
 							var d = XML2JSON(data);
 							if (d[0] && d[1] === p[0]) {
-								$("#head").attr("src", skinPath + d[3]);
+								$("#head").attr("src", skinPath + d[2]);
 								$("#name").val(p[0]);
 								$("#uname").val(p[1]);
 							} else sorry("该志愿者不存在！")
