@@ -18,7 +18,7 @@ $(function() {
 						var p = res.text.split("#");
 						ajaxGet(temService + "Check", { un: p[1] }, function(data) {
 							var d = XML2JSON(data);
-							if (d[0] && d[1] === p[0] && d[2].toUpperCase() === p[2].toUpperCase()) {
+							if (d[0] && d[1] === p[0]) {
 								$("#head").attr("src", skinPath + d[3]);
 								$("#name").val(p[0]);
 								$("#uname").val(p[1]);

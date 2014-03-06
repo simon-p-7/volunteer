@@ -4,6 +4,10 @@ img[alt='logo'] {
 }
 
 button {
+    width: 49.3%;
+}
+
+button[class='main'] {
 	width: 100%;
 }
 

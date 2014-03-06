@@ -81,7 +81,7 @@ win.ajaxGet = function(url, data, func, sync) {
 		"global": false,
 		"success": func,
 		"error": function(xhr, type, err) {
-			sorry("网络不给力！\n 或\n服务器出错！");
+			sorry("网络很不给力，请检查！");
 		}
 	});
 }

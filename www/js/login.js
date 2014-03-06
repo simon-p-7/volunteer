@@ -23,6 +23,9 @@ $(function () {
     $("#btn_bk").click(function (e) {
         redirect("index.html");
     });
+    $("#btn_rg").click(function (e) {
+        redirect("register.html");
+    });
 
     function login(e) {
         $("article").css("margin-top", "0");
