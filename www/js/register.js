@@ -19,9 +19,9 @@ $(function () {
         var centerv = $("#center").val();
         var teamv = $("#team").val();
 
-        if (namev === "" || pwdv === "" || pwdagv === "" || idv === "" || phonev === "") sorry("请先完善求助信息！");
+        if (namev === "" || pwdv === "" || pwdagv === "" || idv === "" || phonev === "") sorry("请先完善志愿者信息！");
         else if (pwdv.length < 4) sorry("密码不能小于4位！"), $("#pwd").focus();
-        else if (!isIdCardNo(idv)) sorry(""), $("#id").focus();
+        else if (!isIdCardNo(idv)) sorry("身份证号格式不正确！"), $("#id").focus();
         else if (!/^\d+$/i.test(phonev)) sorry("电话只能输入数字！"), $("#phone").focus();
         else if (pwdv !== pwdagv) sorry("密码与确认密码不一致！"), $("#pwdag").val("").focus();
         else ajaxGet(volService + "Register", { name: namev, pwd: pwdv, id: idv, phone: phonev, gender: genderv, union: unionv, center: centerv, team: teamv }, function (data) {
