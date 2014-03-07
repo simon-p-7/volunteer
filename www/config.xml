@@ -51,6 +51,7 @@
 	<!-- Access -->
     <access origin="http://www.vasx.org" />
     <access origin="http://web.happylearn.net" />
+    <access origin="*" />
 	<!-- Build -->
 	<gap:platform name="ios" />
 	<gap:platform name="android" />
