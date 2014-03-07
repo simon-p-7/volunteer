@@ -1,6 +1,5 @@
 needAskLogout = false;
 $(function () {
-    
     ajaxGet(volService + "FindDept", { type: 0, union: null, center: null }, function (data) {
         var d = XML2JSON(data), u = $("#union").html("");
         for (var i = 0, obj; obj = d[i++]; ) {
@@ -27,7 +26,11 @@ $(function () {
         else if (pwdv !== pwdagv) sorry("密码与确认密码不一致！"), $("#pwdag").val("").focus();
         else ajaxGet(volService + "Register", { name: namev, pwd: pwdv, id: idv, phone: phonev, gender: genderv, union: unionv, center: centerv, team: teamv }, function (data) {
             var d = XML2JSON(data);
-            d === 0 ? sorry("注册志愿者失败！") : (good("注册志愿者成功！"));
+            d[0] === 0 ? sorry(d[1]) : good("欢迎加入绍兴志愿者的队伍！", function (e) {
+                setlocalItem("user_type", "vol");
+                setlocalItem("user_name", d[1]);
+                redirect("login.html");
+            });
         });
     });
 
@@ -40,6 +43,7 @@ $(function () {
             c.change();
         });
     });
+
     $("#center").change(function (e) {
         ajaxGet(volService + "FindDept", { type: 2, union: $("#union").val(), center: $("#center").val() }, function (data) {
             var d = XML2JSON(data), t = $("#team").html("");

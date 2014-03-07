@@ -49,8 +49,8 @@ win.getlocalItem = function(k) {
 	return stag.getItem(k);
 }
 
-win.good = function(msg) {
-	alert(msg, null, "恭喜您", "确 定");
+win.good = function(msg, func) {
+	alert(msg, func, "恭喜您", "确 定");
 }
 
 win.sorry = function(msg, func) {
