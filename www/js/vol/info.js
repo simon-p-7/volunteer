@@ -11,7 +11,7 @@ $(function () {
         $("#hour").val(d[6]);
         $("#star").val(d[7]);
         if (d[8] === "") {
-            $("qr").remove();
+            $("#qr,#qrl").remove();
         } else {
             $("#qr").attr("src", d[8]);
         }

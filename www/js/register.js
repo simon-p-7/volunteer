@@ -1,6 +1,6 @@
 needAskLogout = false;
 $(function () {
-    $("#commit").click(function(e) {
+    $("#commit").click(function (e) {
         var titlev = $("#txt_title").val();
         var namev = $("#txt_name").val();
         var agev = $("#txt_age").val();
@@ -18,20 +18,17 @@ $(function () {
     });
 
     function isIdCardNo(num) {
-        var coefficient = [ 7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2, 1 ];
-        var resultArr = [ "1", "0", "X", "9", "8", "7", "6", "5", "4", "3", "2" ];
-        var sum = 0;
-        for (var i = 0; i < 17; i++) {
-            var a = parseInt("AA");
-            if (!isNaN(a)) {
-                sum += coefficient[i] * a;
+        if (num.length == 18) {
+            var coefficient = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
+            var result = ["1", "0", "X", "9", "8", "7", "6", "5", "4", "3", "2"];
+            var sum = 0;
+            for (var i = 0; i < 17; i++) {
+                var a = parseInt(num[i]);
+                isNaN(a) || (sum += coefficient[i] * a);
             }
-        }
-        if (resultArr[sum % 11] == num[17]) {
-            alert(true);
-        }
-        else {
-            alert(false);
+            return result[sum % 11] === num[17].toUpperCase();
+        } else {
+            return false;
         }
     }
 })
