@@ -1,14 +1,13 @@
 needAskLogout = false;
 $(function () {
-    var u = $("#union");
+    
     ajaxGet(volService + "FindDept", { type: 0, union: null, center: null }, function (data) {
-        var d = XML2JSON(data);
-        u.html("");
+        var d = XML2JSON(data), u = $("#union").html("");
         for (var i = 0, obj; obj = d[i++]; ) {
             u.append("<option value='" + obj + "'>" + obj + "</option>");
         }
+        u.change();
     });
-    u.change();
 
     $("#commit").click(function (e) {
         var namev = $("#name").val();
@@ -19,7 +18,7 @@ $(function () {
         var genderv = $("#gender").val();
         var unionv = $("#union").val();
         var centerv = $("#center").val();
-        var teamv = "123";
+        var teamv = $("#team").val();
 
         if (namev === "" || pwdv === "" || pwdagv === "" || idv === "" || phonev === "") sorry("请先完善求助信息！");
         else if (pwdv.length < 4) sorry("密码不能小于4位！"), $("#pwd").focus();
@@ -33,21 +32,20 @@ $(function () {
     });
 
     $("#union").change(function (e) {
-        var c = $("#center");
-
         ajaxGet(volService + "FindDept", { type: 1, union: $("#union").val(), center: null }, function (data) {
-            var d = XML2JSON(data);
-            c.html("");
+            var d = XML2JSON(data), c = $("#center").html("");
             for (var i = 0, obj; obj = d[i++]; ) {
                 c.append("<option value='" + obj + "'>" + obj + "</option>");
             }
+            c.change();
         });
-        c.change();
     });
     $("#center").change(function (e) {
         ajaxGet(volService + "FindDept", { type: 2, union: $("#union").val(), center: $("#center").val() }, function (data) {
-            var d = XML2JSON(data);
-            // TODO
+            var d = XML2JSON(data), t = $("#team").html("");
+            for (var i = 0, obj; obj = d[i++]; ) {
+                t.append("<option value='" + obj + "'>" + obj + "</option>");
+            }
         });
     });
 
