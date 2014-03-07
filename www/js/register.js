@@ -1,19 +1,53 @@
 needAskLogout = false;
 $(function () {
-    $("#commit").click(function (e) {
-        var titlev = $("#txt_title").val();
-        var namev = $("#txt_name").val();
-        var agev = $("#txt_age").val();
-        var phonev = $("#txt_phone").val();
-        var addressv = $("#txt_address").val();
-        var contentv = $("#txt_content").val();
+    var u = $("#union");
+    ajaxGet(volService + "FindDept", { type: 0, union: null, center: null }, function (data) {
+        var d = XML2JSON(data);
+        u.html("");
+        for (var i = 0, obj; obj = d[i++]; ) {
+            u.append("<option value='" + obj + "'>" + obj + "</option>");
+        }
+    });
+    u.change();
 
-        if (titlev === "" || namev === "" || agev === "" || phonev === "" || addressv === "" || contentv === "") sorry("请先完善求助信息！");
-        else if (!/^\d+$/i.test(agev)) sorry("年龄只能输入数字！"), $("#txt_age").focus();
-        else if (!/^\d+$/i.test(phonev)) sorry("电话只能输入数字！"), $("#txt_phone").focus();
-        else ajaxGet(hlpService + "Help", { title: titlev, name: namev, age: agev, phone: phonev, address: addressv, content: contentv }, function (data) {
+    $("#commit").click(function (e) {
+        var namev = $("#name").val();
+        var pwdv = $("#pwd").val();
+        var pwdagv = $("#pwdag").val();
+        var idv = $("#id").val();
+        var phonev = $("#phone").val();
+        var genderv = $("#gender").val();
+        var unionv = $("#union").val();
+        var centerv = $("#center").val();
+        var teamv = "123";
+
+        if (namev === "" || pwdv === "" || pwdagv === "" || idv === "" || phonev === "") sorry("请先完善求助信息！");
+        else if (pwdv.length < 4) sorry("密码不能小于4位！"), $("#pwd").focus();
+        else if (!isIdCardNo(idv)) sorry(""), $("#id").focus();
+        else if (!/^\d+$/i.test(phonev)) sorry("电话只能输入数字！"), $("#phone").focus();
+        else if (pwdv !== pwdagv) sorry("密码与确认密码不一致！"), $("#pwdag").val("").focus();
+        else ajaxGet(volService + "Register", { name: namev, pwd: pwdv, id: idv, phone: phonev, gender: genderv, union: unionv, center: centerv, team: teamv }, function (data) {
             var d = XML2JSON(data);
-            d === 0 ? sorry("提交信息失败！") : (good("提交信息成功！"), goBack());
+            d === 0 ? sorry("注册志愿者失败！") : (good("注册志愿者成功！"));
+        });
+    });
+
+    $("#union").change(function (e) {
+        var c = $("#center");
+
+        ajaxGet(volService + "FindDept", { type: 1, union: $("#union").val(), center: null }, function (data) {
+            var d = XML2JSON(data);
+            c.html("");
+            for (var i = 0, obj; obj = d[i++]; ) {
+                c.append("<option value='" + obj + "'>" + obj + "</option>");
+            }
+        });
+        c.change();
+    });
+    $("#center").change(function (e) {
+        ajaxGet(volService + "FindDept", { type: 2, union: $("#union").val(), center: $("#center").val() }, function (data) {
+            var d = XML2JSON(data);
+            // TODO
         });
     });
 
