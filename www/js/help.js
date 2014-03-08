@@ -13,7 +13,7 @@ $(function () {
         else if (!/^\d+$/i.test(phonev)) sorry("电话只能输入数字！"), $("#txt_phone").focus();
         else ajaxGet(hlpService + "Help", { title: titlev, name: namev, age: agev, phone: phonev, address: addressv, content: contentv }, function(data) {
         	var d = XML2JSON(data);
-        	d === 0 ? sorry("提交信息失败！") : (good("提交信息成功！"), goBack());
+        	d === 0 ? sorry("求助失败！") : (good("求助成功！"), goBack());
         });
  });
 
