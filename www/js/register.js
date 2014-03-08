@@ -57,8 +57,8 @@ $(function () {
             var coefficient = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
             var result = ["1", "0", "X", "9", "8", "7", "6", "5", "4", "3", "2"];
             var sum = 0;
-            for (var i = 0; i < 17; ) {
-                var a = parseInt(str[i++]);
+            for (var i = 0; i < 17; i++) {
+                var a = parseInt(str[i]);
                 isNaN(a) || (sum += coefficient[i] * a);
             }
             return result[sum % 11] === str[17].toUpperCase();
