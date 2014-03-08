@@ -1,6 +1,6 @@
 window.win = window, win.doc = win.document, win.sess = win.sessionStorage, win.stag = win.localStorage;
 //win.serviceHost = "http://web.happylearn.net/", win.fileHost = "http://www.vasx.org/Module/";
-win.serviceHost = "http://60.187.0.130:2544/", win.fileHost = "http://60.187.0.130:15041/Module/";
+win.serviceHost = "http://60.187.6.212:2544/", win.fileHost = "http://60.187.6.212:15041/Module/";
 win.volService = serviceHost + "VolunteerWebService.asmx/", win.temService = serviceHost + "TeamWebService.asmx/", win.nwsService = serviceHost + "NewsWebService.asmx/", win.hlpService = serviceHost + "HelpWebService.asmx/";
 win.skinPath = fileHost + "FilesUp/UserIcon/", win.filePath = fileHost + "FilesUp/Project/";
 win.needAskExit = undefined, win.needAskLogout = undefined;
