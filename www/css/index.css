@@ -18,7 +18,7 @@ section article h2 {
 }
 
 section article ul li {
-	padding: 0.7em 1em;
+	padding: 0.7em 0.9em;
 }
 
 section article ul li span,section article ul li nobr {
@@ -31,11 +31,11 @@ section article ul li span,section article ul li nobr {
 }
 
 section article ul[id] li nobr {
-    width: 70%;
+    width: 69%;
 }
 
 section article ul[id] li span {
-    width: 30%;
+    width: 31%;
     font-size: 1.8em;
     text-align: right;
     color: #ccc;
