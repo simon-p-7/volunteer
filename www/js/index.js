@@ -14,6 +14,14 @@ $(function() {
         }
     });
 
+    var nt = $("#news_title").click(function(e) {
+    	redirect("nws/list.html");
+    });
+    
+    var at = $("#activity_title").click(function(e) {
+    	redirect("vol/launch-activity.html");
+    });
+
     uls.click(function(e) {
         var tag = e.target;
         if (tag.nodeName.toUpperCase() !== "LI") {
@@ -38,8 +46,8 @@ $(function() {
         }
         switch (tag.id) {
             case "home": redirect("index.html"); break;
-            case "news": redirect("nws/list.html"); break;
-            case "activity": redirect("vol/launch-activity.html"); break;
+            case "news": nt.click(e); break;
+            case "activity": at.click(e); break;
             case "help": redirect("help.html"); break;
             case "login": redirect("login.html"); break;
         }
