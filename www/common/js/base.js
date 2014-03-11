@@ -40,11 +40,11 @@ win.getItem = function(k) {
 	return sess.getItem(k);
 }
 
-win.setlocalItem = function(k, v) {
+win.setLocalItem = function(k, v) {
 	stag.setItem(k, v);
 }
 
-win.getlocalItem = function(k) {
+win.getLocalItem = function(k) {
 	return stag.getItem(k);
 }
 
@@ -57,11 +57,16 @@ win.sorry = function(msg, func) {
 }
 
 win.appExit = function() {
-	confirm("您真的要退出程序吗？", function(btn) { btn === 1 && nav.app.exitApp() }, "提 示", "是,否");
+	confirm("您真的要退出程序吗？", function(btn) { btn === 1 && nav.app.exitApp(); }, "提 示", "是,否");
 }
 
 win.logout = function() {
-	confirm("您真的要注销用户吗？", function(btn) { btn === 1 && (sess.clear(), goBack()); }, "提 示", "是,否");
+	confirm("您真的要注销用户吗？", function(btn) {
+		if (btn === 1) {
+			sess.clear();
+			goBack();
+		}
+	}, "提 示", "是,否");
 }
 
 win.getId = function(id, g) {

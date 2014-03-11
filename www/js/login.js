@@ -5,10 +5,10 @@ $(function () {
         var type = e.target.id;
         $("#" + (type === "vol" ? "tem" : "vol")).next().removeClass("checked").addClass("unchecked");
         $("#txt_pw").val("");
-        $("#txt_un").val(getlocalItem("user_type") === type ? getlocalItem("user_name") : "");
+        $("#txt_un").val(getLocalItem("user_type") === type ? getLocalItem("user_name") : "");
     });
 
-    var savedType = getlocalItem("user_type");
+    var savedType = getLocalItem("user_type");
     $("#" + (!savedType ? "tem" : savedType)).prop("checked", true).change();
 
     $("body").click(function (e) {
@@ -38,8 +38,8 @@ $(function () {
                 if (d === null) sorry("登录失败！");
                 else {
                     setItem("user_id", d);
-                    setlocalItem("user_type", isTem ? "tem" : "vol");
-                    setlocalItem("user_name", unv);
+                    setLocalItem("user_type", isTem ? "tem" : "vol");
+                    setLocalItem("user_name", unv);
                     redirect(getDir() + "info.html");
                 }
                 $("#txt_pw").val("");
