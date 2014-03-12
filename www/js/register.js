@@ -28,9 +28,7 @@ $(function () {
         else ajaxGet(volService + "Register", { name: namev, pwd: pwdv, id: idv, phone: phonev, gender: genderv, union: unionv, center: centerv, team: teamv }, function (data) {
             var d = XML2JSON(data);
             d[0] === 0 ? sorry(d[1]) : good("欢迎 " + namev + " 加入绍兴志愿者的队伍！\n您的志愿者编号是：" + d[1], function (e) {
-                setLocalItem("user_type", "vol");
-				setLocalItem("user_name", d[1]);
-				goBack();
+                setLocalItem("user_type", "vol"), setLocalItem("user_name", d[1]), goBack();
             });
         });
     });
