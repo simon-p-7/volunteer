@@ -4,7 +4,6 @@
   <description>志愿绍兴 http://www.vasx.org</description>
   <author email="simon.p.7@outlook.com" href="http://simon7world.wordpress.com/">Simon Chang</author>
   <!-- plugin -->
-  <gap:plugin name="org.apache.cordova.device" />
   <gap:plugin name="org.apache.cordova.network-information" />
   <gap:plugin name="org.apache.cordova.dialogs" /> 
   <gap:plugin name="org.apache.cordova.vibration" />
