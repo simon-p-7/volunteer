@@ -41,8 +41,7 @@ article div {
 footer {
 	width: 100%;
 	position: fixed;
-	top: 1em;
-	right: 0.5em;
-	text-align: right;
+	bottom: 0.7em;
+	text-align: center;
 	font-size: 1.5em;
 }
